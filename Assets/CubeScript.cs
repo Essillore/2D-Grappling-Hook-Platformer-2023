@@ -5,6 +5,7 @@ using UnityEngine;
 public class CubeScript : MonoBehaviour
 {
     public float speed = 2f;
+    public float superSpeed = 4f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,5 +17,10 @@ public class CubeScript : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.right * speed * Time.deltaTime);
+        float intellect = 2;
+        if (intellect>3)
+            {
+            speed = superSpeed;
+        }
     }
 }
