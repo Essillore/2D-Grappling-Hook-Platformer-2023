@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
+    public GameObject gm;
+    public GoldCollected goldCounter;
+
+    private void Start()
+    {
+        gm = GameObject.Find("GM");
+        goldCounter = gm.GetComponent<GoldCollected>();
+    }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -11,7 +19,8 @@ public class Collectable : MonoBehaviour
         if
         (collision.CompareTag("Player"))
         {
-            transform.position = Vector2.up;
+            goldCounter.GoldIsCollected();
+            Destroy(gameObject);
         }
     }
 }
