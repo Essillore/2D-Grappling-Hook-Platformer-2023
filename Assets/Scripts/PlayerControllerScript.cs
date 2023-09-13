@@ -40,11 +40,16 @@ public class PlayerControllerScript : MonoBehaviour
     public float jumpBuffer = 0.3f;
     public float jumpBufferTimer;
 
+    //Riikan lisäyksiä
+    [Header("Temperature")]
+    public TemperatureTimer temperature;
+
 
     void Start()
     {
         transform.position = playerSpawn.position;
         stretchAnimator = GetComponentInChildren<Animator>();
+        temperature = GetComponent<TemperatureTimer>();
     }
 
     //Check if player is grounded
@@ -149,6 +154,7 @@ public class PlayerControllerScript : MonoBehaviour
         if (context.performed && coyoteTimeTimer > 0f)
         {
             jumpBufferTimer = jumpBuffer;
+            KeepingWarm(3f);
         }
 
         if (context.canceled && myRB.velocity.y > 0f)
@@ -224,6 +230,13 @@ public class PlayerControllerScript : MonoBehaviour
     {
         horizontal = context.ReadValue<Vector2>().x;
         vertical = context.ReadValue<Vector2>().y;
+        KeepingWarm(2f);
+    }
+
+    //If player moves, jumps (or grapples), add to timer to stop character temperature from dropping.
+    public void KeepingWarm(float howLongTimer)
+    {
+        temperature.timer = 0.1f + howLongTimer;
     }
 
 }
