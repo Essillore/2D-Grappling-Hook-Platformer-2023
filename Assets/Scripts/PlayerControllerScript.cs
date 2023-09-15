@@ -30,9 +30,9 @@ public class PlayerControllerScript : MonoBehaviour
     public PhysicsMaterial2D stop;
     public bool onMovingPlat = false;
     public bool onPassPlat = false;
-    public bool onRopeGrabRange = false;
     public GameObject activePassPlat;
     public PassPlatformScript platScript;
+    public GrapplingHook gHook;
 
     [Header("CoyoteTime & Jump Buffer")]
     public float coyoteTime = 0.3f;
@@ -50,6 +50,7 @@ public class PlayerControllerScript : MonoBehaviour
         transform.position = playerSpawn.position;
         stretchAnimator = GetComponentInChildren<Animator>();
         temperature = GetComponent<TemperatureTimer>();
+        gHook= GameObject.Find("GrapplingHook").GetComponent<GrapplingHook>();
     }
 
     //Check if player is grounded
@@ -63,7 +64,10 @@ public class PlayerControllerScript : MonoBehaviour
         //clamp maximum speed for player incase of funky physics
         float clampedYVel = Mathf.Clamp(myRB.velocity.y, -maxYVelocity, maxYVelocity);
 
-        myRB.velocity = new Vector2(horizontal * speed, clampedYVel);
+        if (!gHook.isGrappling)
+        {
+            myRB.velocity = new Vector2(horizontal * speed, clampedYVel);
+        }
 
         if (!onMovingPlat)
         {
@@ -73,6 +77,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     void Update()
     {
+
         if (jumpBufferTimer > 0f && coyoteTime > 0f)
         {
             myRB.AddForce(Vector2.up * jumpForce);
@@ -211,19 +216,11 @@ public class PlayerControllerScript : MonoBehaviour
         {
             transform.position = playerSpawn.position;
         }
-
-        if (collision.gameObject.CompareTag("Rope"))
-        {
-            onRopeGrabRange = true;
-        }
     }
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Rope"))
-        {
-            onRopeGrabRange = false;
-        }
+
     }
 
     public void Move(InputAction.CallbackContext context)
