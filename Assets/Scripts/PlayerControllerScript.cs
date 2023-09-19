@@ -47,14 +47,15 @@ public class PlayerControllerScript : MonoBehaviour
 
     //Riikan lisäyksiä
     [Header("Temperature")]
-    public TemperatureTimer temperature;
+    //public TemperatureTimer temperature;
+    public PlayerTemperature playerTemperature;
 
 
     void Start()
     {
         transform.position = playerSpawn.position;
         stretchAnimator = GetComponentInChildren<Animator>();
-        temperature = GetComponent<TemperatureTimer>();
+        playerTemperature = GetComponent<PlayerTemperature>();
         gHook= GameObject.Find("GrapplingHook").GetComponent<GrapplingHook>();
     }
 
@@ -181,7 +182,7 @@ public class PlayerControllerScript : MonoBehaviour
         if (context.performed && coyoteTimeTimer > 0f)
         {
             jumpBufferTimer = jumpBuffer;
-            KeepingWarm(3f);
+            KeepingWarm();
         }
 
         if (context.canceled && myRB.velocity.y > 0f)
@@ -260,13 +261,30 @@ public class PlayerControllerScript : MonoBehaviour
             moving = false;
         }
 
-        KeepingWarm(2f);
+        KeepingWarm();
     }
 
-    //If player moves, jumps (or grapples), add to timer to stop character temperature from dropping.
-    public void KeepingWarm(float howLongTimer)
+    //Pass information to PlayerTemperature about if player is moving or not
+    public void KeepingWarm()
     {
-        temperature.timer = 0.1f + howLongTimer;
+       // temperature.timer = 0.1f + howLongTimer;
+
+        if (moving == true)
+        {
+            MovingToGetWarmer();
+        }
+        else if (moving == false)
+        {
+            IsStillGettingCooler();
+        }
+    }
+    public void MovingToGetWarmer()
+    {
+        playerTemperature.isMoving = true;
     }
 
+    public void IsStillGettingCooler()
+    {
+        playerTemperature.isMoving = false;
+    }
 }

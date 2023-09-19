@@ -532,6 +532,14 @@ PrefabInstance:
       propertyPath: gHook
       value: 
       objectReference: {fileID: 2008777276}
+    - target: {fileID: 20768907134313247, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
+      propertyPath: playerSpawn
+      value: 
+      objectReference: {fileID: 1991467912}
+    - target: {fileID: 20768907134313247, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
+      propertyPath: playerTemperature
+      value: 
+      objectReference: {fileID: 2147391996}
     - target: {fileID: 2794583850067836851, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
       propertyPath: player
       value: 
@@ -592,10 +600,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2794583850067836851, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3550680657751691510, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2147391996}
   m_SourcePrefab: {fileID: 100100000, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
 --- !u!1 &590952666
 GameObject:
@@ -2819,6 +2831,38 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3550680657751691510, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
   m_PrefabInstance: {fileID: 560595136}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2147391992 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 20768907134313247, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
+  m_PrefabInstance: {fileID: 560595136}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147391988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d1e604c9834f5448f2ee2064983b3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2147391996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147391988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf8b5060f7baae44995fa2f3e4803ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 2147391992}
+  isMoving: 0
+  currentPlayerTemperature: 0
+  initialPlayerTemperature: 0
+  temperatureRiseRate: 0
+  temperatureSinkRate: 0.2
+  environmentTemperature: 20
+  playerTemperatureText: {fileID: 1590008658}
+  environmentTemperatureText: {fileID: 1551187068}
 --- !u!1001 &3569164187803606159
 PrefabInstance:
   m_ObjectHideFlags: 0

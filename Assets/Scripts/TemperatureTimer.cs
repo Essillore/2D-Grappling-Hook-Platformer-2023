@@ -28,7 +28,7 @@ public class TemperatureTimer : MonoBehaviour
         {
             DropPlayerTemperature();
             StartCoroutine(TemperatureDropTimer());
-           // StartCoroutine(NewtonianTemperatureDrop());
+            StartCoroutine(NewtonianTemperatureDrop());
         }
     }
 
@@ -49,8 +49,8 @@ public class TemperatureTimer : MonoBehaviour
     }
 
 
-        //    playerTemperature = -heatTransferCoefficient * (playerTemperature - environmentTemperature);
-         //  playerTemperature = environmentTemperature + (38f - environmentTemperature) * Mathf.Log(-0.2f); Mathf.Exp(-0.2f);
+        // playerTemperature = -heatTransferCoefficient * (playerTemperature - environmentTemperature);
+        // playerTemperature = environmentTemperature + (38f - environmentTemperature) * Mathf.Log(-0.2f); Mathf.Exp(-0.2f);
 
 
     //ChatGPT-assisted-created-BROKEN-WIP TemperatureDrop that's proportional to the difference in environment and player temperature.
@@ -60,7 +60,7 @@ public class TemperatureTimer : MonoBehaviour
     {
         float initialPlayerTemperature = playerTemperature; // Store the initial temperature
 
-        float temperatureChangeRate = 0.02f; // Rate of temperature change (1°C in 5 seconds)
+        float temperatureChangeRate = 0.0002f; // Rate of temperature change (1°C in 5 seconds)
 
         while (elapsedTime < 3f) // Adjust the time duration as needed
         {
