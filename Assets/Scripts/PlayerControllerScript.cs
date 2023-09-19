@@ -18,6 +18,7 @@ public class PlayerControllerScript : MonoBehaviour
     private bool moving= false;
 
     [Header("Animation")]
+    public SpriteRenderer playerSprite;
     public bool animationsON = true;
     public Animator stretchAnimator;
 
@@ -173,8 +174,16 @@ public class PlayerControllerScript : MonoBehaviour
 
     public void Flip()
     {
-        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        facingRight = !facingRight;
+        if (facingRight)
+        {
+            playerSprite.flipX = true;
+            facingRight = false;
+        }
+        else if (!facingRight)
+        {
+            playerSprite.flipX = false;
+            facingRight = true;
+        }
     }
 
     public void Jump(InputAction.CallbackContext context)
