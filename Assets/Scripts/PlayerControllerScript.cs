@@ -7,14 +7,19 @@ public class PlayerControllerScript : MonoBehaviour
 {
     [Header("Stats")]
     public float speed = 6f;
+    public float swingSpeed = 1f;
     private float horizontal;
     private float vertical;
     public float jumpForce = 10f;
     public float maxYVelocity;
     public Rigidbody2D myRB;
-    public Animator stretchAnimator;
     public bool facingRight = true;
     private bool hasLanded = false;
+    private bool moving= false;
+
+    [Header("Animation")]
+    public bool animationsON = true;
+    public Animator stretchAnimator;
 
     [Header("Grounded")]
     public Transform groundCheck;
@@ -69,9 +74,21 @@ public class PlayerControllerScript : MonoBehaviour
             myRB.velocity = new Vector2(horizontal * speed, clampedYVel);
         }
 
+        if (gHook.isGrappling)
+        {
+
+            if (moving) 
+            {
+                myRB.velocity = new Vector2(myRB.velocity.x + horizontal * swingSpeed, clampedYVel);
+            }
+        }
+
         if (!onMovingPlat)
         {
-            stretchAnimator.SetFloat("yVelocity", myRB.velocity.y);
+            if (animationsON)
+            {
+                stretchAnimator.SetFloat("yVelocity", myRB.velocity.y);
+            }
         }
     }
 
@@ -120,13 +137,19 @@ public class PlayerControllerScript : MonoBehaviour
             //landing squeeze animation
             if (!hasLanded)
             {
-                stretchAnimator.SetBool("Squeeze", true);
+                if (animationsON)
+                {
+                    stretchAnimator.SetBool("Squeeze", true);
+                }
                 hasLanded = true;
             }
 
             else if (hasLanded)
             {
+                if (animationsON) 
+                {
                 stretchAnimator.SetBool("Squeeze", false);
+                }
             }
 
             coyoteTimeTimer = coyoteTime;
@@ -227,6 +250,17 @@ public class PlayerControllerScript : MonoBehaviour
     {
         horizontal = context.ReadValue<Vector2>().x;
         vertical = context.ReadValue<Vector2>().y;
+
+        if (context.action.triggered)
+        {
+            moving = true;
+        }
+
+        else
+        {
+            moving = false;
+        }
+
         KeepingWarm(2f);
     }
 
