@@ -76,7 +76,6 @@ public class PlayerControllerScript : MonoBehaviour
 
         if (gHook.isGrappling)
         {
-
             if (moving) 
             {
                 myRB.velocity = new Vector2(myRB.velocity.x + horizontal * swingSpeed, clampedYVel);
