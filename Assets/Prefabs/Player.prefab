@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1495960483155291497}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -310,7 +310,7 @@ MonoBehaviour:
   playerController: {fileID: 20768907134313247}
   isMoving: 0
   currentPlayerTemperature: 0
-  initialPlayerTemperature: 0
+  initialPlayerTemperature: 38
   temperatureRiseRate: 0.2
   someScalingFactor: 0.2
   coolingRate: 0

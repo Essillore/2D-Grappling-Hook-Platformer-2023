@@ -110,6 +110,7 @@ public class PlayerControllerScript : MonoBehaviour
         {
             moving = false;
         }
+        KeepingWarm();
 
         if (jumpBufferTimer > 0f && coyoteTime > 0f)
         {
@@ -276,9 +277,9 @@ public class PlayerControllerScript : MonoBehaviour
         vertical = context.ReadValue<Vector2>().y;
 
         movingHor = Mathf.Abs(horizontal) > 0.1f && context.action.triggered;
-        movingVert = Mathf.Abs(vertical) > 0.1f && context.action.triggered;
-
-        KeepingWarm();
+        movingVert = Mathf.Abs(vertical) > 0.1f && context.action.triggered; 
+        
+ 
     }
 
     //Pass information to PlayerTemperature about if player is moving or not
