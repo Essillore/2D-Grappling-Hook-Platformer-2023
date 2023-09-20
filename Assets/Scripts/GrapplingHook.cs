@@ -18,11 +18,10 @@ public class GrapplingHook : MonoBehaviour
     public bool isGrappling = false;
     private Vector2 grapplePoint;
     private Vector2 startPoint;
+
+    [Header("Physics")]
     private Rigidbody2D rb;
-    private float ropeDistance;
-
-    //[Header("Physics")]
-
+    public float ropeDistance;
 
 
     void Start()

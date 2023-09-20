@@ -16,6 +16,8 @@ public class PlayerControllerScript : MonoBehaviour
     public bool facingRight = true;
     private bool hasLanded = false;
     private bool moving= false;
+    private bool movingHor = false;
+    private bool movingVert = false;
 
     [Header("Animation")]
     public SpriteRenderer playerSprite;
@@ -78,9 +80,14 @@ public class PlayerControllerScript : MonoBehaviour
 
         if (gHook.isGrappling)
         {
-            if (moving) 
+            if (movingHor) 
             {
                 myRB.velocity = new Vector2(myRB.velocity.x + horizontal * swingSpeed, clampedYVel);
+            }
+
+            if(movingVert)
+            {
+                gHook.ropeDistance = 0.1f;
             }
         }
 
@@ -95,6 +102,14 @@ public class PlayerControllerScript : MonoBehaviour
 
     void Update()
     {
+        if(movingHor || movingVert)
+        {
+            moving = true;
+        }
+        else
+        {
+            moving = false;
+        }
 
         if (jumpBufferTimer > 0f && coyoteTime > 0f)
         {
@@ -260,15 +275,8 @@ public class PlayerControllerScript : MonoBehaviour
         horizontal = context.ReadValue<Vector2>().x;
         vertical = context.ReadValue<Vector2>().y;
 
-        if (context.action.triggered)
-        {
-            moving = true;
-        }
-
-        else
-        {
-            moving = false;
-        }
+        movingHor = Mathf.Abs(horizontal) > 0.1f && context.action.triggered;
+        movingVert = Mathf.Abs(vertical) > 0.1f && context.action.triggered;
 
         KeepingWarm();
     }
