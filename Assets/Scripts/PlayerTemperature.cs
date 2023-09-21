@@ -11,8 +11,8 @@ public class PlayerTemperature : MonoBehaviour
     [Header("Temperature Rising")]
     public float currentPlayerTemperature;
     public float initialPlayerTemperature;
-    public float temperatureRiseRate = 0.11f;
-    public float someScalingFactor = 0.11f;
+    public float temperatureRiseRate = 0.02f;
+    public float someScalingFactor = 0.05f;
 
     [Header("Temperature Falling")]
     public float coolingRate;
