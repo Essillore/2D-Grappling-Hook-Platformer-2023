@@ -120,6 +120,5 @@ public class GrapplingHook : MonoBehaviour
             yield return new WaitForSeconds(grappleCD);
             grappleStacks ++;
         cdRecovering = false;
-
     }
 }

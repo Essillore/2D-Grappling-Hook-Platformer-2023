@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16810022b29bfeb498058f1c7aec08a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
+  goldCounter: {fileID: 0}
 --- !u!58 &8794689347805245342
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -80,7 +82,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.009065509}
   serializedVersion: 2
-  m_Radius: 0.25522947
+  m_Radius: 0.5757658
 --- !u!1 &8802944380466776885
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 8802944380466776885}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.011337271}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -40,6 +40,7 @@ public class PlayerControllerScript : MonoBehaviour
     public bool onPassPlat = false;
     public GameObject activePassPlat;
     public PassPlatformScript platScript;
+    public float ropeLengthSpeed = 3.0f;
     public GrapplingHook gHook;
 
     [Header("CoyoteTime & Jump Buffer")]
@@ -87,7 +88,8 @@ public class PlayerControllerScript : MonoBehaviour
 
             if(movingVert)
             {
-                gHook.ropeDistance = 0.1f;
+                gHook.ropeDistance -= vertical * ropeLengthSpeed * Time.fixedDeltaTime;
+                gHook.ropeDistance = Mathf.Max(gHook.ropeDistance, 1f);
             }
         }
 
