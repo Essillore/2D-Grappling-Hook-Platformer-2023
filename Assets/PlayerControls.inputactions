@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "EatAction",
+                    "type": "Button",
+                    "id": "c2c4582d-7aca-4e8c-b317-ab1a843db5b6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -313,6 +322,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Hook",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dda508e7-3947-4c40-ab13-52a62f143133",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "EatAction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
