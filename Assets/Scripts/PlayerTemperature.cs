@@ -54,7 +54,7 @@ public class PlayerTemperature : MonoBehaviour
             float temperatureDifference = currentPlayerTemperature - environmentTemperature;
 
             // Define a rate of cooling based on the temperature difference and clamped to a certain range
-            coolingRate = Mathf.Clamp(temperatureDifference / 20.0f, -1.0f, 1.0f);
+            coolingRate = Mathf.Clamp(temperatureDifference / 20.0f, -2.0f, 2.0f);
 
             // Adjust the player's temperature based on the cooling rate
             currentPlayerTemperature -= coolingRate * Time.deltaTime;

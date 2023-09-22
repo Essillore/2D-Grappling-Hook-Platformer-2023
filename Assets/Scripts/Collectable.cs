@@ -6,6 +6,7 @@ public class Collectable : MonoBehaviour
 {
     public GameObject gm;
     public GoldCollected goldCounter;
+    //public GameObject pickUp;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class Collectable : MonoBehaviour
         (collision.CompareTag("Player"))
         {
             goldCounter.GoldIsCollected();
+           // Instantiate(pickUp, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
