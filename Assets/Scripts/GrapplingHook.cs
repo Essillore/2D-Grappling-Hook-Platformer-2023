@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,12 +13,15 @@ public class GrapplingHook : MonoBehaviour
     public LayerMask hookableLayers;
     public SpringJoint2D springJoint;
     public float grappleStacks = 2f;
-    public float grappleCD = 5f;
-    public bool cdRecovering = false;
     public TextMeshProUGUI grappleStacksTEXT;
     public bool isGrappling = false;
     private Vector2 grapplePoint;
     private Vector2 startPoint;
+    private Vector2 rangeEndPoint;
+    private float rangeMaxDistance;
+
+    public bool rangeIndicatorON = true;
+    private LineRenderer rangeIndicatorLine;
 
     [Header("Physics")]
     private Rigidbody2D rb;
@@ -27,24 +31,20 @@ public class GrapplingHook : MonoBehaviour
     void Start()
     {
         springJoint.enabled = false;
-        rb= GameObject.Find("Player").GetComponent<Rigidbody2D>();
+        rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
+        rangeIndicatorLine = GameObject.Find("Player").GetComponent<LineRenderer>();
         rb.freezeRotation = true;
+        rangeMaxDistance = maxDistance;
     }
 
     // Update is called once per frame
     void Update()
     {
-        startPoint= transform.position;
+        startPoint = transform.position;
+
+        rangeEndPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         grappleStacksTEXT.text = "" + grappleStacks;
-
-        if (grappleStacks < 2)
-        {
-            if (!cdRecovering)
-            {
-                StartCoroutine(GrappleCD());
-            }
-        }
 
         if (isGrappling)
         {
@@ -55,6 +55,23 @@ public class GrapplingHook : MonoBehaviour
             lineRenderer.SetPosition(0, startPoint);
             lineRenderer.SetPosition(1, grapplePoint);
         }
+
+        Vector2 direction = rangeEndPoint - startPoint;
+
+        if (direction.magnitude > rangeMaxDistance)
+        {
+            direction = direction.normalized * maxDistance;
+        }
+
+        if (rangeIndicatorON)
+        {
+            rangeIndicatorLine.positionCount= 2;
+            rangeIndicatorLine.SetPosition(0, startPoint);
+            rangeIndicatorLine.SetPosition(1, startPoint + direction);
+        }
+
+
+
     }
 
     public void Hook(InputAction.CallbackContext context)
@@ -63,7 +80,7 @@ public class GrapplingHook : MonoBehaviour
         {
             StartGrapple();
         }
-        else if(context.performed && isGrappling)
+        else if (context.performed && isGrappling)
         {
             StopGrapple();
         }
@@ -87,12 +104,12 @@ public class GrapplingHook : MonoBehaviour
         }
     }
 
-    private void StopGrapple()
+    public void StopGrapple()
     {
-        grappleStacks -- ;
+        grappleStacks--;
         springJoint.enabled = false;
         rb.gravityScale = 6f;
-        rb.velocity = new Vector2(rb.velocity.x * 10f,rb.velocity.y + 6f);
+        rb.velocity = new Vector2(rb.velocity.x * 10f, rb.velocity.y + 6f);
         rb.rotation = 0f;
         rb.freezeRotation = true;
         LineRenderer lineRenderer = GetComponent<LineRenderer>();
@@ -102,7 +119,7 @@ public class GrapplingHook : MonoBehaviour
 
     private IEnumerator Grapple()
     {
-        while(isGrappling)
+        while (isGrappling)
         {
             rb.freezeRotation = false;
             rb.angularVelocity *= 0.5f;
@@ -112,13 +129,5 @@ public class GrapplingHook : MonoBehaviour
             springJoint.connectedAnchor = grapplePoint;
             yield return null;
         }
-    }
-
-    private IEnumerator GrappleCD()
-    {
-        cdRecovering= true;
-            yield return new WaitForSeconds(grappleCD);
-            grappleStacks ++;
-        cdRecovering = false;
     }
 }

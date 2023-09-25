@@ -153,6 +153,8 @@ public class PlayerControllerScript : MonoBehaviour
 
         if (IsGrounded())
         {
+            gHook.grappleStacks = 2f;
+
             //landing squeeze animation
             if (!hasLanded)
             {
@@ -204,6 +206,14 @@ public class PlayerControllerScript : MonoBehaviour
         }
     }
 
+    public void ReturnToCheckPoint(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Death();
+        }
+    }
+
     public void Jump(InputAction.CallbackContext context)
     {
         if (context.performed && coyoteTimeTimer > 0f)
@@ -217,6 +227,11 @@ public class PlayerControllerScript : MonoBehaviour
             jumpBufferTimer -= Time.deltaTime;
             myRB.velocity = new Vector2(myRB.velocity.x, myRB.velocity.y * 0.6f);
             coyoteTimeTimer = 0f;
+        }
+
+        if (context.performed && gHook.isGrappling)
+        {
+            gHook.StopGrapple();
         }
     }
 
@@ -260,11 +275,12 @@ public class PlayerControllerScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("CheckPoint"))
         {
+            playerTemperature.currentPlayerTemperature = playerTemperature.initialPlayerTemperature;
             playerSpawn.position = collision.transform.position;
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            transform.position = playerSpawn.position;
+            Death();
         }
     }
 
@@ -279,9 +295,13 @@ public class PlayerControllerScript : MonoBehaviour
         vertical = context.ReadValue<Vector2>().y;
 
         movingHor = Mathf.Abs(horizontal) > 0.1f && context.action.triggered;
-        movingVert = Mathf.Abs(vertical) > 0.1f && context.action.triggered; 
-        
- 
+        movingVert = Mathf.Abs(vertical) > 0.1f && context.action.triggered;
+    }
+
+    public void Death()
+    {
+        gHook.StopGrapple();
+        transform.position = playerSpawn.position;
     }
 
     //Pass information to PlayerTemperature about if player is moving or not
