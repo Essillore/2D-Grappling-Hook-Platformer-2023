@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - MovingPlatform
   - CheckPoint
+  - FreezingWater
   layers:
   - Default
   - TransparentFX

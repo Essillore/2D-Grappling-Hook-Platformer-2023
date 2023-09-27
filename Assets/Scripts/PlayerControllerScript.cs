@@ -8,7 +8,7 @@ public class PlayerControllerScript : MonoBehaviour
     [Header("Stats")]
     public float speed = 6f;
     public float swingSpeed = 1f;
-    private float horizontal;
+    public float horizontal;
     private float vertical;
     public float jumpForce = 10f;
     public float maxYVelocity;
@@ -23,6 +23,9 @@ public class PlayerControllerScript : MonoBehaviour
     public SpriteRenderer playerSprite;
     public bool animationsON = true;
     public Animator stretchAnimator;
+    public SpriteRenderer iceBlock;
+    private bool isFrozen = false;
+    private bool inFreezingWater = false;
 
     [Header("Grounded")]
     public Transform groundCheck;
@@ -57,6 +60,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     void Start()
     {
+        iceBlock.gameObject.SetActive(false);
         transform.position = playerSpawn.position;
         stretchAnimator = GetComponentInChildren<Animator>();
         playerTemperature = GetComponent<PlayerTemperature>();
@@ -74,9 +78,16 @@ public class PlayerControllerScript : MonoBehaviour
         //clamp maximum speed for player incase of funky physics
         float clampedYVel = Mathf.Clamp(myRB.velocity.y, -maxYVelocity, maxYVelocity);
 
-        if (!gHook.isGrappling)
+        if (!isFrozen)
         {
-            myRB.velocity = new Vector2(horizontal * speed, clampedYVel);
+            if (!gHook.isGrappling)
+            {
+                myRB.velocity = new Vector2(horizontal * speed, clampedYVel);
+            }
+        }
+        if (isFrozen)
+        {
+            myRB.velocity = new Vector2(0, 0);
         }
 
         if (gHook.isGrappling)
@@ -210,7 +221,12 @@ public class PlayerControllerScript : MonoBehaviour
     {
         if (context.performed)
         {
-            Death();
+            StopCoroutine("OnDeath");
+            gHook.StopGrapple();
+            isFrozen = false;
+            inFreezingWater = false;
+            iceBlock.gameObject.SetActive(false);
+            transform.position = playerSpawn.position;
         }
     }
 
@@ -282,6 +298,11 @@ public class PlayerControllerScript : MonoBehaviour
         {
             Death();
         }
+        if (collision.gameObject.CompareTag("FreezingWater"))
+        {
+            inFreezingWater = true;
+            Death();
+        }
     }
 
     public void OnTriggerExit2D(Collider2D collision)
@@ -291,17 +312,37 @@ public class PlayerControllerScript : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        horizontal = context.ReadValue<Vector2>().x;
-        vertical = context.ReadValue<Vector2>().y;
+            horizontal = context.ReadValue<Vector2>().x;
+            vertical = context.ReadValue<Vector2>().y;
 
-        movingHor = Mathf.Abs(horizontal) > 0.1f && context.action.triggered;
-        movingVert = Mathf.Abs(vertical) > 0.1f && context.action.triggered;
+            movingHor = Mathf.Abs(horizontal) > 0.1f && context.action.triggered;
+            movingVert = Mathf.Abs(vertical) > 0.1f && context.action.triggered;
     }
 
     public void Death()
     {
+        StartCoroutine("OnDeath");
         gHook.StopGrapple();
+    }
+
+    private IEnumerator OnDeath()
+    {
+        if (inFreezingWater)
+        {
+            playerTemperature.currentPlayerTemperature = 0f;
+            Frozen();
+            yield return new WaitForSeconds(2f);
+        }
+        isFrozen = false;
+        inFreezingWater= false;
+        iceBlock.gameObject.SetActive(false);
         transform.position = playerSpawn.position;
+    }
+
+    private void Frozen()
+    {
+        isFrozen= true;
+        iceBlock.gameObject.SetActive(true);
     }
 
     //Pass information to PlayerTemperature about if player is moving or not

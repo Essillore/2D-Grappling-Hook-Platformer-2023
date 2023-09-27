@@ -19,6 +19,7 @@ public class GrapplingHook : MonoBehaviour
     private Vector2 startPoint;
     private Vector2 rangeEndPoint;
     private float rangeMaxDistance;
+    public PlayerControllerScript pCs;
 
     public bool rangeIndicatorON = true;
     private LineRenderer rangeIndicatorLine;
@@ -30,6 +31,7 @@ public class GrapplingHook : MonoBehaviour
 
     void Start()
     {
+        pCs = GameObject.Find("Player").GetComponent<PlayerControllerScript>();
         springJoint.enabled = false;
         rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
         rangeIndicatorLine = GameObject.Find("Player").GetComponent<LineRenderer>();
@@ -109,7 +111,7 @@ public class GrapplingHook : MonoBehaviour
         grappleStacks--;
         springJoint.enabled = false;
         rb.gravityScale = 6f;
-        rb.velocity = new Vector2(rb.velocity.x * 10f, rb.velocity.y + 6f);
+        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + 6f);
         rb.rotation = 0f;
         rb.freezeRotation = true;
         LineRenderer lineRenderer = GetComponent<LineRenderer>();
