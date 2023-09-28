@@ -48,14 +48,20 @@ public class GrapplingHook : MonoBehaviour
 
         grappleStacksTEXT.text = "" + grappleStacks;
 
+        //LineRenderer
+        LineRenderer lineRenderer = GetComponent<LineRenderer>();
+
         if (isGrappling)
         {
-
-            //LineRenderer
-            LineRenderer lineRenderer = GetComponent<LineRenderer>();
+            lineRenderer.enabled = true;
             lineRenderer.positionCount = 2;
             lineRenderer.SetPosition(0, startPoint);
             lineRenderer.SetPosition(1, grapplePoint);
+        }
+
+        if (!isGrappling)
+        {
+            lineRenderer.enabled = false;
         }
 
         Vector2 direction = rangeEndPoint - startPoint;
@@ -109,6 +115,8 @@ public class GrapplingHook : MonoBehaviour
     public void StopGrapple()
     {
         grappleStacks--;
+        pCs.playerAnim.SetBool("isGrappling", false);
+        pCs.isGrapplingA = false;
         springJoint.enabled = false;
         rb.gravityScale = 6f;
         rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + 6f);

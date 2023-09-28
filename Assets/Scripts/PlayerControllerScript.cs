@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
+using Unity.VisualScripting;
 
 public class PlayerControllerScript : MonoBehaviour
 {
@@ -20,9 +21,14 @@ public class PlayerControllerScript : MonoBehaviour
     private bool movingVert = false;
 
     [Header("Animation")]
-    public SpriteRenderer playerSprite;
+    public GameObject playerSpriteObject;
+    public SpriteRenderer[] playerSprite;
+    public SpriteRenderer[] playerHat;
+    public SpriteRenderer[] playerScarf;
+    public Animator playerAnim;
+    public bool isGrapplingA = false;
+    public bool isRunningA = false;
     public bool animationsON = true;
-    public Animator stretchAnimator;
     public SpriteRenderer iceBlock;
     private bool isFrozen = false;
     private bool inFreezingWater = false;
@@ -62,7 +68,6 @@ public class PlayerControllerScript : MonoBehaviour
     {
         iceBlock.gameObject.SetActive(false);
         transform.position = playerSpawn.position;
-        stretchAnimator = GetComponentInChildren<Animator>();
         playerTemperature = GetComponent<PlayerTemperature>();
         gHook= GameObject.Find("GrapplingHook").GetComponent<GrapplingHook>();
     }
@@ -108,13 +113,22 @@ public class PlayerControllerScript : MonoBehaviour
         {
             if (animationsON)
             {
-                stretchAnimator.SetFloat("yVelocity", myRB.velocity.y);
+
             }
         }
     }
 
     void Update()
     {
+        if (gHook.isGrappling)
+        {
+            if (!isGrapplingA) 
+            {
+            isGrapplingA = true;
+            playerAnim.SetBool("isGrappling", true);
+            }
+        }
+
         if(movingHor || movingVert)
         {
             moving = true;
@@ -127,6 +141,8 @@ public class PlayerControllerScript : MonoBehaviour
 
         if (jumpBufferTimer > 0f && coyoteTime > 0f)
         {
+            if (!isFrozen)
+            playerAnim.SetTrigger("Jump");
             myRB.AddForce(Vector2.up * jumpForce);
             jumpBufferTimer = 0f;
         }
@@ -152,15 +168,16 @@ public class PlayerControllerScript : MonoBehaviour
             Flip();
         }
 
-        /*//animate running
-        if (horizontal != 0f)
+        if (horizontal != 0f && !isRunningA)
         {
-            myAnim.SetBool("IsRunning", true);
+            isRunningA= true;
+            playerAnim.SetBool("Running", true);
         }
         else if (horizontal == 0f)
         {
-            myAnim.SetBool("IsRunning", false);
-        }*/
+            isRunningA= false;
+            playerAnim.SetBool("Running", false);
+        }
 
         if (IsGrounded())
         {
@@ -171,7 +188,7 @@ public class PlayerControllerScript : MonoBehaviour
             {
                 if (animationsON)
                 {
-                    stretchAnimator.SetBool("Squeeze", true);
+                
                 }
                 hasLanded = true;
             }
@@ -180,7 +197,7 @@ public class PlayerControllerScript : MonoBehaviour
             {
                 if (animationsON) 
                 {
-                stretchAnimator.SetBool("Squeeze", false);
+                
                 }
             }
 
@@ -205,15 +222,22 @@ public class PlayerControllerScript : MonoBehaviour
 
     public void Flip()
     {
-        if (facingRight)
+
+        Vector3 currentScale = playerSpriteObject.transform.localScale;
+        if (!isFrozen)
         {
-            playerSprite.flipX = true;
-            facingRight = false;
-        }
-        else if (!facingRight)
-        {
-            playerSprite.flipX = false;
-            facingRight = true;
+            if (facingRight)
+            {
+                currentScale.x = -1;
+                playerSpriteObject.transform.localScale = currentScale;
+                facingRight = false;
+            }
+            else if (!facingRight)
+            {
+                currentScale.x = 1;
+                playerSpriteObject.transform.localScale = currentScale;
+                facingRight = true;
+            }
         }
     }
 
