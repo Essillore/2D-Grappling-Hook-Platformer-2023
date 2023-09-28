@@ -23,7 +23,7 @@ public class GoldCollected : MonoBehaviour
     public void GoldIsCollected()
     {
         goldCollectedNumber++;
-        goldCollectedUI.text = "Gold: " + goldCollectedNumber;
+        goldCollectedUI.text = " " + goldCollectedNumber;
     }
 
 
