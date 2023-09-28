@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class ChiliCollected : MonoBehaviour
 {
@@ -36,9 +37,10 @@ public class ChiliCollected : MonoBehaviour
 
     public void ChiliEaten()
     {
+        print("Chili eaten");
         if (chiliStoredNumber >= 1)
         {
-            playerTemperature.currentPlayerTemperature =+ chiliWarmingAmount;
+            playerTemperature.currentPlayerTemperature += chiliWarmingAmount;
             chiliStoredNumber--;
             chiliStoredUI.text = chiliStoredNumber + "  ";
         }

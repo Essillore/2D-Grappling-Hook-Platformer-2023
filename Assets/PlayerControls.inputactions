@@ -340,7 +340,7 @@
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": "",
                     "action": "EatAction",
                     "isComposite": false,
                     "isPartOfComposite": false
