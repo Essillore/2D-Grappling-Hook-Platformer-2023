@@ -10,6 +10,7 @@ TagManager:
   - MovingPlatform
   - CheckPoint
   - FreezingWater
+  - Coin
   layers:
   - Default
   - TransparentFX

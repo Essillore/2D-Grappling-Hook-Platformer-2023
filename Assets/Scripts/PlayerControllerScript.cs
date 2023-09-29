@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 public class PlayerControllerScript : MonoBehaviour
 {
     [Header("Stats")]
+    public CameraController camControl;
     public float speed = 6f;
     public float swingSpeed = 1f;
     public float horizontal;
@@ -15,10 +16,12 @@ public class PlayerControllerScript : MonoBehaviour
     public float maxYVelocity;
     public Rigidbody2D myRB;
     public bool facingRight = true;
-    private bool hasLanded = false;
     private bool moving= false;
     private bool movingHor = false;
     private bool movingVert = false;
+
+    [Header("Audio")]
+    public AudioManager audioManager;
 
     [Header("Animation")]
     public GameObject playerSpriteObject;
@@ -66,6 +69,8 @@ public class PlayerControllerScript : MonoBehaviour
 
     void Start()
     {
+        camControl = GameObject.Find("CameraController").GetComponent<CameraController>();
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         iceBlock.gameObject.SetActive(false);
         transform.position = playerSpawn.position;
         playerTemperature = GetComponent<PlayerTemperature>();
@@ -116,6 +121,15 @@ public class PlayerControllerScript : MonoBehaviour
 
             }
         }
+
+        if (jumpBufferTimer > 0f && coyoteTime > 0f)
+        {
+            if (!isFrozen)
+            audioManager.Play("Jump");
+            playerAnim.SetTrigger("Jump");
+            myRB.AddForce(Vector2.up * jumpForce);
+            jumpBufferTimer = 0f;
+        }
     }
 
     void Update()
@@ -139,14 +153,6 @@ public class PlayerControllerScript : MonoBehaviour
         }
         KeepingWarm();
 
-        if (jumpBufferTimer > 0f && coyoteTime > 0f)
-        {
-            if (!isFrozen)
-            playerAnim.SetTrigger("Jump");
-            myRB.AddForce(Vector2.up * jumpForce);
-            jumpBufferTimer = 0f;
-        }
-
         //Moving platform braking material swap
         if (horizontal != 0f && onMovingPlat)
         {
@@ -162,7 +168,6 @@ public class PlayerControllerScript : MonoBehaviour
         {
             Flip();
         }
-
         if (horizontal > 0.1f && !facingRight)
         {
             Flip();
@@ -171,8 +176,12 @@ public class PlayerControllerScript : MonoBehaviour
         if (horizontal != 0f && !isRunningA)
         {
             isRunningA= true;
-            playerAnim.SetBool("Running", true);
+            if (IsGrounded())
+            {
+                playerAnim.SetBool("Running", true);
+            }
         }
+
         else if (horizontal == 0f)
         {
             isRunningA= false;
@@ -181,34 +190,14 @@ public class PlayerControllerScript : MonoBehaviour
 
         if (IsGrounded())
         {
+            camControl.DeadZoneOff();
             gHook.grappleStacks = 2f;
-
-            //landing squeeze animation
-            if (!hasLanded)
-            {
-                if (animationsON)
-                {
-                
-                }
-                hasLanded = true;
-            }
-
-            else if (hasLanded)
-            {
-                if (animationsON) 
-                {
-                
-                }
-            }
-
             coyoteTimeTimer = coyoteTime;
-            //myAnim.SetBool("isGrounded", true);
         }
         else
         {
-            hasLanded = false;
+            camControl.DeadZoneOn();
             coyoteTimeTimer -= Time.deltaTime;
-            //myAnim.SetBool("isGrounded", false);
         }
 
         //Deactivate pass platform collider
@@ -327,6 +316,11 @@ public class PlayerControllerScript : MonoBehaviour
             inFreezingWater = true;
             Death();
         }
+        if (collision.gameObject.CompareTag("Coin"))
+        {
+            audioManager.Play("Coin");
+        }
+
     }
 
     public void OnTriggerExit2D(Collider2D collision)

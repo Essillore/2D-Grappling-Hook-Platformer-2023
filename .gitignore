@@ -70,3 +70,120 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/StoreAssets/Free/Assets.meta
+Assets/StoreAssets/Free/Assets/8Bit.meta
+Assets/StoreAssets/Free/Assets/8Bit/Coin_Pick_Up_03.wav
+Assets/StoreAssets/Free/Assets/8Bit/Coin_Pick_Up_03.wav.meta
+Assets/StoreAssets/Free/Assets/8Bit/Explosion_04.wav
+Assets/StoreAssets/Free/Assets/8Bit/Explosion_04.wav.meta
+Assets/StoreAssets/Free/Assets/8Bit/Laser_01.wav
+Assets/StoreAssets/Free/Assets/8Bit/Laser_01.wav.meta
+Assets/StoreAssets/Free/Assets/8Bit/Power_Pick_Up_06.wav
+Assets/StoreAssets/Free/Assets/8Bit/Power_Pick_Up_06.wav.meta
+Assets/StoreAssets/Free/Assets/8Bit/UI_Blip_01.wav
+Assets/StoreAssets/Free/Assets/8Bit/UI_Blip_01.wav.meta
+Assets/StoreAssets/Free/Assets/Exertions.meta
+Assets/StoreAssets/Free/Assets/Exertions/Ed_Attack_1.wav
+Assets/StoreAssets/Free/Assets/Exertions/Ed_Attack_1.wav.meta
+Assets/StoreAssets/Free/Assets/Exertions/Julie_Jump_3.wav
+Assets/StoreAssets/Free/Assets/Exertions/Julie_Jump_3.wav.meta
+Assets/StoreAssets/Free/Assets/Exertions/Mike_Death_15.wav
+Assets/StoreAssets/Free/Assets/Exertions/Mike_Death_15.wav.meta
+Assets/StoreAssets/Free/Assets/Footsteps.meta
+Assets/StoreAssets/Free/Assets/Footsteps/Footstep_Gravel_3.wav
+Assets/StoreAssets/Free/Assets/Footsteps/Footstep_Gravel_3.wav.meta
+Assets/StoreAssets/Free/Assets/Footsteps/Footstep_Gravel_4.wav
+Assets/StoreAssets/Free/Assets/Footsteps/Footstep_Gravel_4.wav.meta
+Assets/StoreAssets/Free/Assets/UI.meta
+Assets/StoreAssets/Free/Assets/UI/Blips_14.wav
+Assets/StoreAssets/Free/Assets/UI/Blips_14.wav.meta
+Assets/StoreAssets/Free/Assets/UI/Bloops_01.wav
+Assets/StoreAssets/Free/Assets/UI/Bloops_01.wav.meta
+Assets/StoreAssets/Free/Assets/UI/Clicks_13.wav
+Assets/StoreAssets/Free/Assets/UI/Clicks_13.wav.meta
+Assets/StoreAssets/Free/Assets/UI/Xylo_13.wav
+Assets/StoreAssets/Free/Assets/UI/Xylo_13.wav.meta
+Assets/StoreAssets/Free/Assets/UI2.meta
+Assets/StoreAssets/Free/Assets/UI2/BellishAccept6.wav
+Assets/StoreAssets/Free/Assets/UI2/BellishAccept6.wav.meta
+Assets/StoreAssets/Free/Assets/UI2/ClipsAccept1.wav
+Assets/StoreAssets/Free/Assets/UI2/ClipsAccept1.wav.meta
+Assets/StoreAssets/Free/Assets/UI2/DistClickBlocked1.wav
+Assets/StoreAssets/Free/Assets/UI2/DistClickBlocked1.wav.meta
+Assets/StoreAssets/Free/Assets/UI2/GlassHitScroll6.wav
+Assets/StoreAssets/Free/Assets/UI2/GlassHitScroll6.wav.meta
+Assets/StoreAssets/Free/Assets/UI2/HitsAccept2.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Activate Glyph Forcefield.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Activate Glyph Forcefield.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Activate Plinth 03.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Activate Plinth 03.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Arcane Beacon.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Arcane Beacon.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Arcane Symbol Activate 01.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Arcane Symbol Activate 01.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Arcane Wind Chime Gust.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Arcane Wind Chime Gust.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Glyph Activation Light 01.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Glyph Activation Light 01.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Glyph Activation Warm Aura.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Glyph Activation Warm Aura.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Raise Stone Pillar Long.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Raise Stone Pillar Long.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Rotate Stone 03.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/Rotate Stone 03.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/UI Message Appear 01.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Arcane Activations Preview/AUDIO/UI Message Appear 01.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Documentation.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Documentation/Thank You and Info.pdf
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Documentation/Thank You and Info.pdf.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_HEARTBEAT_LOOP.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_HEARTBEAT_LOOP.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_SIGNAL_LOOP.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_SIGNAL_LOOP.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_SPACECRAFT_HOLD_LOOP.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_SPACECRAFT_HOLD_LOOP.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_TUNDRA_LOOP_01.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_TUNDRA_LOOP_01.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_TUNNEL_WIND_LOOP.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_TUNNEL_WIND_LOOP.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_UNDERGROUND_POWER_STATION_LOOP.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_UNDERGROUND_POWER_STATION_LOOP.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/ONE_SHOT_CINEMATIC_EFFECT_10.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/ONE_SHOT_CINEMATIC_EFFECT_10.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/ONE_SHOT_SPACE_TEAR.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/ONE_SHOT_SPACE_TEAR.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/SUB_DROP_DEEP.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/SUB_DROP_DEEP.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Bank Card Placed Down 03.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Bank Card Placed Down 03.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Counter Loop 01.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Counter Loop 01.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Dropped on Ceramic Dish.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Dropped on Ceramic Dish.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Dropped on Wood Rattle.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Dropped on Wood Rattle.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Flung.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Flung.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Hardcover Spin Loop.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Hardcover Spin Loop.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Slid Along Wood.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Slid Along Wood.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins In Sack Dropped on Wood.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins In Sack Dropped on Wood.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins_Bottlecaps_Drop.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins_Bottlecaps_Drop.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins_Placed_Down_Hardcover_Pitched.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins_Placed_Down_Hardcover_Pitched.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Notes Scrunched In Wallet.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Notes Scrunched In Wallet.wav.meta
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Receipt Handled 03.wav
+Assets/StoreAssets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Receipt Handled 03.wav.meta
+Assets/StoreAssets/Free/Assets/UI2/HitsAccept2.wav.meta
+Assets/StoreAssets/Free.meta

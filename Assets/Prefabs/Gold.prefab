@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8794689347805245342}
   m_Layer: 0
   m_Name: Gold
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.009065509}
   serializedVersion: 2
-  m_Radius: 1.0407026
+  m_Radius: 0.8067193
 --- !u!1 &8802944380466776885
 GameObject:
   m_ObjectHideFlags: 0
