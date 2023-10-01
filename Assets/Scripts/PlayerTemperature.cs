@@ -12,11 +12,13 @@ public class PlayerTemperature : MonoBehaviour
     public float currentPlayerTemperature;
     public float initialPlayerTemperature;
     public float temperatureRiseRate = 0.02f;
-    public float someScalingFactor = 0.05f;
+    public float someScalingFactor = 0.04f;
 
     [Header("Temperature Falling")]
     public float coolingRate;
-    public float environmentTemperature = 12f;
+    public float howQuicklyDrops = 20.0f;
+    public float clampForTemperatureDrop = 4f;
+    public float environmentTemperature = 4f;
 
     [Header("Temperature UI")]
     public TMP_Text playerTemperatureText;
@@ -31,8 +33,19 @@ public class PlayerTemperature : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            //Temperature change of player
-            if (isMoving == true) //warming
+        //Temperature change of player
+
+        //player temperature will fall, more if the difference between player and environment is bigger.
+
+        // Calculate the temperature difference between the player and environment
+        float temperatureDifference = currentPlayerTemperature - environmentTemperature;
+
+        // Define a rate of cooling based on the temperature difference and clamped to a certain range
+        coolingRate = Mathf.Clamp(temperatureDifference / howQuicklyDrops, -clampForTemperatureDrop, clampForTemperatureDrop);
+
+        // Adjust the player's temperature based on the cooling rate
+        currentPlayerTemperature -= coolingRate * Time.deltaTime;
+        if (isMoving == true) //warming
         {
             //player temperature will rise, proportionally more if 
             //difference between current temperature and normal temperature is big.
@@ -48,16 +61,7 @@ public class PlayerTemperature : MonoBehaviour
         else if (isMoving == false) //cooling
         {
 
-            //player temperature will fall, more if the difference between player and environment is bigger.
-
-            // Calculate the temperature difference between the player and environment
-            float temperatureDifference = currentPlayerTemperature - environmentTemperature;
-
-            // Define a rate of cooling based on the temperature difference and clamped to a certain range
-            coolingRate = Mathf.Clamp(temperatureDifference / 20.0f, -2.0f, 2.0f);
-
-            // Adjust the player's temperature based on the cooling rate
-            currentPlayerTemperature -= coolingRate * Time.deltaTime;
+         
         }
             playerTemperatureText.text = currentPlayerTemperature.ToString("F1") + " °C"; // Display the temperature with one decimal place
             environmentTemperatureText.text = environmentTemperature + " °C";
