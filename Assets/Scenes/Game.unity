@@ -25905,7 +25905,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ea844ef3dc7832e4ea959ba7ff2c499c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7f9577d8d251d2f48be0e9070a59ef63, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -36855,6 +36855,18 @@ PrefabInstance:
       propertyPath: environmentTemperatureText
       value: 
       objectReference: {fileID: 933994694}
+    - target: {fileID: 2047205992898851612, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2047205992898851612, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2047205992898851612, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3550680657751691510, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
       propertyPath: m_Name
       value: Player

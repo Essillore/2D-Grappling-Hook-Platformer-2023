@@ -12,13 +12,13 @@ public class PlayerTemperature : MonoBehaviour
     public float currentPlayerTemperature;
     public float initialPlayerTemperature;
     public float temperatureRiseRate = 0.02f;
-    public float someScalingFactor = 0.04f;
+    public float someScalingFactor = 0.02f;
 
     [Header("Temperature Falling")]
     public float coolingRate;
-    public float howQuicklyDrops = 20.0f;
-    public float clampForTemperatureDrop = 4f;
-    public float environmentTemperature = 4f;
+    public float howQuicklyDrops = 10.0f;
+    public float clampForTemperatureDrop = 2f;
+    public float environmentTemperature = -2f;
 
     [Header("Temperature UI")]
     public TMP_Text playerTemperatureText;
