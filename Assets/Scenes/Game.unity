@@ -14113,36 +14113,42 @@ MonoBehaviour:
     volume: 0.3
     pitch: 1
     loop: 0
+    isPlaying: 0
     source: {fileID: 0}
   - name: Coin
     clip: {fileID: 8300000, guid: 19a5b18b079f844bba783a9ec5f32efa, type: 3}
     volume: 0.302
     pitch: 1
     loop: 0
+    isPlaying: 0
     source: {fileID: 0}
   - name: Woosh
     clip: {fileID: 8300000, guid: 1b0c4e0f1fafd0d45a17feeace4450f5, type: 3}
     volume: 0.3
     pitch: 1
     loop: 0
+    isPlaying: 0
     source: {fileID: 0}
   - name: Footstep1
     clip: {fileID: 8300000, guid: 94dbd4febab734210a43c84263f5e116, type: 3}
     volume: 0.3
     pitch: 1
-    loop: 1
+    loop: 0
+    isPlaying: 0
     source: {fileID: 0}
   - name: Footstep2
     clip: {fileID: 8300000, guid: 3ff9fcf8763db443d8c48710cdf9ab60, type: 3}
     volume: 0.3
     pitch: 1
     loop: 0
+    isPlaying: 0
     source: {fileID: 0}
   - name: Footstep3
     clip: {fileID: 8300000, guid: a1382e4f297374edea614c369f31dcb2, type: 3}
     volume: 0.3
     pitch: 1
     loop: 0
+    isPlaying: 0
     source: {fileID: 0}
 --- !u!4 &896613155
 Transform:
@@ -36823,6 +36829,18 @@ PrefabInstance:
       propertyPath: playerSpawn
       value: 
       objectReference: {fileID: 1991467912}
+    - target: {fileID: 20768907134313247, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
+      propertyPath: minSwingSpeed
+      value: 97.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 20768907134313247, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
+      propertyPath: nextFootstepTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 20768907134313247, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
+      propertyPath: footstepFrequency
+      value: 0.34
+      objectReference: {fileID: 0}
     - target: {fileID: 1495960483155291497, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
       propertyPath: coolingRate
       value: 0
@@ -36918,7 +36936,11 @@ PrefabInstance:
     - target: {fileID: 8309902556491804212, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 96456a169b1235e48a4bf2978a8f4623, type: 2}
+      objectReference: {fileID: 2100000, guid: fcb3d958a16200d49b32a48c7fc8a752, type: 2}
+    - target: {fileID: 9180341486560858966, guid: 44c3f312892822941905880bfa06d7f8, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

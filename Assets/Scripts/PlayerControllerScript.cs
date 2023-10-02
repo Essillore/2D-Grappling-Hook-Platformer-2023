@@ -22,6 +22,9 @@ public class PlayerControllerScript : MonoBehaviour
 
     [Header("Audio")]
     public AudioManager audioManager;
+    public float footstepFrequency;
+    public float minSwingSpeed = 5f;
+    private float nextFootstepTime;
 
     [Header("Animation")]
     public GameObject playerSpriteObject;
@@ -153,6 +156,33 @@ public class PlayerControllerScript : MonoBehaviour
         }
         KeepingWarm();
 
+        //Footstep Sounds
+
+        if(movingHor && IsGrounded())
+        {
+            if(Time.time >= nextFootstepTime)
+            {   
+                audioManager.PlayRandomFootstep();
+                nextFootstepTime = Time.time+ footstepFrequency;
+            }
+        }
+
+        //Swinging Sound
+        bool IsSwinging()
+        {
+            return Mathf.Abs(myRB.angularVelocity) > minSwingSpeed;
+        }
+        
+        if(IsSwinging() && !audioManager.IsPlaying("Woosh"))
+        {
+            Debug.Log("Playing Woosh sound");
+            audioManager.Play("Woosh");
+        }
+        else if (!IsSwinging() && audioManager.IsPlaying("Woosh"))
+        {
+            Debug.Log("Stopping Woosh sound");
+            audioManager.Stop("Woosh");
+        }
         //Moving platform braking material swap
         if (horizontal != 0f && onMovingPlat)
         {
