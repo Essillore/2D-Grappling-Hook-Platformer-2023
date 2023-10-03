@@ -11,6 +11,8 @@ TagManager:
   - CheckPoint
   - FreezingWater
   - Coin
+  - GrappleUpgrade
+  - Bumper
   layers:
   - Default
   - TransparentFX

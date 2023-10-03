@@ -43,6 +43,7 @@ public class PlayerControllerScript : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask groundLayer;
+    public bool grappleUpgrade= false;
 
     [Header("Death Values")]
     public Transform playerSpawn;
@@ -221,7 +222,14 @@ public class PlayerControllerScript : MonoBehaviour
         if (IsGrounded())
         {
             camControl.DeadZoneOff();
-            gHook.grappleStacks = 2f;
+            if (!grappleUpgrade)
+            {
+                gHook.grappleStacks = 2f;
+            }
+            else if (grappleUpgrade)
+            {
+                gHook.grappleStacks = 3f;
+            }
             coyoteTimeTimer = coyoteTime;
         }
         else
@@ -351,6 +359,12 @@ public class PlayerControllerScript : MonoBehaviour
             audioManager.Play("Coin");
         }
 
+        if (collision.gameObject.CompareTag("GrappleUpgrade"))
+        {
+            grappleUpgrade = true;
+            gHook.grappleStacks = 3f;
+        }
+
     }
 
     public void OnTriggerExit2D(Collider2D collision)
@@ -384,6 +398,7 @@ public class PlayerControllerScript : MonoBehaviour
         isFrozen = false;
         inFreezingWater= false;
         iceBlock.gameObject.SetActive(false);
+        playerTemperature.currentPlayerTemperature = playerTemperature.initialPlayerTemperature;
         transform.position = playerSpawn.position;
     }
 
