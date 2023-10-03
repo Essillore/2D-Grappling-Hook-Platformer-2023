@@ -11,6 +11,11 @@ public class GoldCollected : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindGoldUI();
+    }
+
+    public void FindGoldUI()
+    {
         goldCollectedUI = GameObject.Find("GoldUI").GetComponent<TMP_Text>();
     }
 

@@ -19,6 +19,7 @@ public class CameraController : MonoBehaviour
         camSettings = basic2Dcamera.GetCinemachineComponent<CinemachineFramingTransposer>();
 
         camNoise = basic2Dcamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+
     }
 
     // Update is called once per frame
@@ -51,6 +52,22 @@ public class CameraController : MonoBehaviour
         camNoise.m_AmplitudeGain = 0;
         camNoise.m_FrequencyGain = 0;
 
+    }
+
+    public void FindPlayerAtSceneLoad()
+    {
+        GameObject player = GameObject.Find("Player");
+        GameObject cameraTarget = player.transform.Find("CameraTarget").gameObject;
+
+        // Check if the camera target exists before setting it as the follow target
+        if (cameraTarget != null)
+        {
+            basic2Dcamera.Follow = cameraTarget.transform;
+        }
+        else
+        {
+            Debug.LogWarning("CameraTarget not found!");
+        }
     }
 
 }

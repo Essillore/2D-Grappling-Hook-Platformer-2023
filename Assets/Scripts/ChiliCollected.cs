@@ -20,14 +20,19 @@ public class ChiliCollected : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerTemperature = GameObject.Find("Player").GetComponent<PlayerTemperature>();
-        chiliStoredUI = GameObject.Find("ChiliUI").GetComponent<TMP_Text>();
+        FindChiliUI();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void FindChiliUI()
+    {
+        playerTemperature = GameObject.Find("Player").GetComponent<PlayerTemperature>();
+        chiliStoredUI = GameObject.Find("ChiliUI").GetComponent<TMP_Text>();
     }
 
     public void ChiliIsCollected()

@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     void Start()
     {
+
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             SceneManager.LoadScene(3);
@@ -33,5 +36,8 @@ public class LevelManager : MonoBehaviour
         {
             SceneManager.LoadScene(2);
         }
+
     }
+
+
 }
