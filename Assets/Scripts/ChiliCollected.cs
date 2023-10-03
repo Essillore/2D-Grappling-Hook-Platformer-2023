@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class ChiliCollected : MonoBehaviour
 {
+    public ChiliCollected chiliCollected;
     //How many chilis player currently has
     public int chiliStoredNumber;
     public TMP_Text chiliStoredUI;
@@ -20,6 +21,7 @@ public class ChiliCollected : MonoBehaviour
     void Start()
     {
         playerTemperature = GameObject.Find("Player").GetComponent<PlayerTemperature>();
+        chiliStoredUI = GameObject.Find("ChiliUI").GetComponent<TMP_Text>();
     }
 
     // Update is called once per frame
