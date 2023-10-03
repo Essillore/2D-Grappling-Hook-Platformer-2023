@@ -23,6 +23,10 @@ public class ChiliCollected : MonoBehaviour
         FindChiliUI();
     }
 
+    private void Awake()
+    {
+        
+    }
     // Update is called once per frame
     void Update()
     {

@@ -6,6 +6,7 @@ using System;
 
 public class GoldCollected : MonoBehaviour
 {
+    public GoldCollected goldCollected;
     public int goldCollectedNumber;
     public TMP_Text goldCollectedUI;
     // Start is called before the first frame update

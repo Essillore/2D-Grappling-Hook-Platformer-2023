@@ -8,6 +8,7 @@ public class LevelLoad : MonoBehaviour
     public ChiliCollected chiliCollected;
     public GoldCollected goldCollected;
     public CameraController camController;
+    public PlayerTemperature playerTemperature;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +19,15 @@ public class LevelLoad : MonoBehaviour
         gm = GameObject.Find("GM");
 
         //Inform ChiliCollected to find the UI
-        chiliCollected = gm.GetComponent<ChiliCollected>();
+        chiliCollected = GameObject.Find("GM").GetComponent<ChiliCollected>();
         chiliCollected.FindChiliUI();
 
         //Inform GoldCollected to find the UI
-        goldCollected = gm.GetComponent<GoldCollected>();
+        goldCollected = GameObject.Find("GM").GetComponent<GoldCollected>();
         goldCollected.FindGoldUI();
+
+        playerTemperature = GameObject.Find("Player").GetComponent<PlayerTemperature>();
+        playerTemperature.FindTemperatureUI();
     }
 
     // Update is called once per frame

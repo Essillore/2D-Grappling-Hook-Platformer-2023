@@ -27,7 +27,15 @@ public class PlayerTemperature : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindTemperatureUI();
         currentPlayerTemperature = initialPlayerTemperature;
+    }
+
+    public void FindTemperatureUI()
+    {
+        playerTemperatureText = GameObject.Find("CharacterTempUI").GetComponent<TMP_Text>();
+        environmentTemperatureText = GameObject.Find("EnvironmentTempUI").GetComponent<TMP_Text>();
+
     }
 
     // Update is called once per frame
