@@ -32,5 +32,9 @@ public class GoldCollected : MonoBehaviour
         goldCollectedUI.text = " " + goldCollectedNumber;
     }
 
+    public void ResetGoldCollected()
+    {
+        goldCollectedNumber = 0;
+    }
 
 }

@@ -57,4 +57,10 @@ public class ChiliCollected : MonoBehaviour
         }
     }
 
+    public void ResetChiliCollected()
+    {
+        chiliStoredNumber = 0;
+        chiliCollectedNumber = 0;
+    }
+
 }
