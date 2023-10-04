@@ -971,7 +971,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.718
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1222,7 +1222,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &704551799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,7 +1962,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &981456253
 GameObject:
   m_ObjectHideFlags: 0
@@ -2468,7 +2468,7 @@ GameObject:
   - component: {fileID: 1271624627}
   - component: {fileID: 1271624626}
   m_Layer: 5
-  m_Name: w
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2786,7 +2786,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.702
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -3334,7 +3334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7f7d8e93c009b4cb519135b2954485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionTime: 1
+  transitionTime: 0
 --- !u!4 &1801588549
 Transform:
   m_ObjectHideFlags: 0
@@ -4012,7 +4012,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.702
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
