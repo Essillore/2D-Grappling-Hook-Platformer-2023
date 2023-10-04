@@ -1,0 +1,802 @@
+fileFormatVersion: 2
+guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba
+importerOverride:
+  nativeImporterType: 2089858483
+  scriptedImporterType:
+    serializedVersion: 2
+    Hash: b10b55a1aa6a1aa32521bc0cab59632e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: Gabby1_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1343
+      height: 1964
+    spriteID: d82b44c9b2c1cf54f84892aca9c4075e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: RightEarTuft
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1786
+      y: 294
+      width: 135
+      height: 120
+    spriteID: 1066c1f8e81df8445bb6d0c2d5c1aaa3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1786, y: 294}
+    spritePosition: {x: 78, y: 1555}
+  - name: RightEar
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 719
+      y: 570
+      width: 581
+      height: 566
+    spriteID: d2cc1fbff7d631a4cb57d8da9d04a88f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 719, y: 570}
+    spritePosition: {x: 121, y: 1037}
+  - name: Earhole
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1938
+      y: 1160
+      width: 96
+      height: 119
+    spriteID: bf497609a5cf5584f9e50a927dfc3c94
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1938, y: 1160}
+    spritePosition: {x: 638, y: 1051}
+  - name: Beanie
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 980
+      height: 558
+    spriteID: 3d53474bc3e123a49831f036b3ad7533
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 189, y: 758}
+  - name: NeckScarf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1308
+      y: 570
+      width: 672
+      height: 367
+    spriteID: 14e47352bf6cc134ebfbfbc32eca3745
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1308, y: 570}
+    spritePosition: {x: 621, y: 577}
+  - name: Tuft6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1929
+      y: 294
+      width: 90
+      height: 119
+    spriteID: ecd0d26bf6dc0cc42b0c2157980ccf3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1929, y: 294}
+    spritePosition: {x: 585, y: 56}
+  - name: Tuft5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 150
+      width: 100
+      height: 129
+    spriteID: 996a8db33653b5d4abff784530dfaf0e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1920, y: 150}
+    spritePosition: {x: 466, y: 56}
+  - name: Tuft4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1786
+      y: 4
+      width: 125
+      height: 138
+    spriteID: cce0c094b079cf548aa60f26e70aa767
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1786, y: 4}
+    spritePosition: {x: 328, y: 80}
+  - name: Scarf2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 1294
+      width: 279
+      height: 570
+    spriteID: 8707b5d77dc4a7049ba643d6d26a836a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 290, y: 1294}
+    spritePosition: {x: 419, y: 150}
+  - name: Tuft1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1437
+      y: 361
+      width: 194
+      height: 127
+    spriteID: a374e9b1d1f63b4499871ec46067f7f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1437, y: 361}
+    spritePosition: {x: 41, y: 400}
+  - name: Tuft2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1786
+      y: 150
+      width: 126
+      height: 136
+    spriteID: c845d2e047ed1644cae5f804fe01e91f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1786, y: 150}
+    spritePosition: {x: 140, y: 279}
+  - name: Tuft3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1639
+      y: 361
+      width: 138
+      height: 131
+    spriteID: 417d9d78522427241b71b20e8a58a2a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1639, y: 361}
+    spritePosition: {x: 202, y: 165}
+  - name: Scarf1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 992
+      y: 4
+      width: 437
+      height: 480
+    spriteID: 75e6ea29189e1ae46a2552c7e95f50d0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 992, y: 4}
+    spritePosition: {x: 220, y: 265}
+  - name: pupil
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1785
+      y: 945
+      width: 207
+      height: 207
+    spriteID: 446469f0e7ce0384abb6a79989d0366b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1785, y: 945}
+    spritePosition: {x: 970, y: 885}
+  - name: Eye
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1437
+      y: 4
+      width: 341
+      height: 349
+    spriteID: ee872648f5e663845b809d2fd660b26b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1437, y: 4}
+    spritePosition: {x: 867, y: 817}
+  - name: RightLeg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1308
+      y: 945
+      width: 273
+      height: 296
+    spriteID: 28fa8074cb804a44e96b4724665cd633
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1308, y: 945}
+    spritePosition: {x: 767, y: 417}
+  - name: Body
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 570
+      width: 707
+      height: 716
+    spriteID: dc0375caaa46fc7429b3987ebf64df78
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 570}
+    spritePosition: {x: 573, y: 605}
+  - name: LeftLeg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1589
+      y: 945
+      width: 188
+      height: 269
+    spriteID: 84e7f43a890c40f48a6227848169cb23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1589, y: 945}
+    spritePosition: {x: 985, y: 457}
+  - name: LeftEarTuft
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1785
+      y: 1160
+      width: 145
+      height: 112
+    spriteID: 54d96f1e5cea9d741943535b5cc482d6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1785, y: 1160}
+    spritePosition: {x: 728, y: 1808}
+  - name: LeftEar
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1294
+      width: 278
+      height: 631
+    spriteID: 8b172514c8eda80449e7f34ea72d5c4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1294}
+    spritePosition: {x: 628, y: 1198}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: RightEarTuft
+    spriteName: RightEarTuft
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1066c1f8e81df8445bb6d0c2d5c1aaa3
+    layerID: 167
+    mosaicPosition: {x: 1786, y: 294}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: RightEar
+    spriteName: RightEar
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d2cc1fbff7d631a4cb57d8da9d04a88f
+    layerID: 161
+    mosaicPosition: {x: 719, y: 570}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Earhole
+    spriteName: Earhole
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bf497609a5cf5584f9e50a927dfc3c94
+    layerID: 256
+    mosaicPosition: {x: 1938, y: 1160}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Beanie
+    spriteName: Beanie
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3d53474bc3e123a49831f036b3ad7533
+    layerID: 234
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: NeckScarf
+    spriteName: NeckScarf
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 14e47352bf6cc134ebfbfbc32eca3745
+    layerID: 206
+    mosaicPosition: {x: 1308, y: 570}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tuft6
+    spriteName: Tuft6
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ecd0d26bf6dc0cc42b0c2157980ccf3f
+    layerID: 231
+    mosaicPosition: {x: 1929, y: 294}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tuft5
+    spriteName: Tuft5
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 996a8db33653b5d4abff784530dfaf0e
+    layerID: 228
+    mosaicPosition: {x: 1920, y: 150}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tuft4
+    spriteName: Tuft4
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cce0c094b079cf548aa60f26e70aa767
+    layerID: 225
+    mosaicPosition: {x: 1786, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Scarf2
+    spriteName: Scarf2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8707b5d77dc4a7049ba643d6d26a836a
+    layerID: 222
+    mosaicPosition: {x: 290, y: 1294}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tuft1
+    spriteName: Tuft1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a374e9b1d1f63b4499871ec46067f7f5
+    layerID: 210
+    mosaicPosition: {x: 1437, y: 361}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tuft2
+    spriteName: Tuft2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c845d2e047ed1644cae5f804fe01e91f
+    layerID: 213
+    mosaicPosition: {x: 1786, y: 150}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tuft3
+    spriteName: Tuft3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 417d9d78522427241b71b20e8a58a2a9
+    layerID: 217
+    mosaicPosition: {x: 1639, y: 361}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Scarf1
+    spriteName: Scarf1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 75e6ea29189e1ae46a2552c7e95f50d0
+    layerID: 203
+    mosaicPosition: {x: 992, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pupil
+    spriteName: pupil
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 446469f0e7ce0384abb6a79989d0366b
+    layerID: 155
+    mosaicPosition: {x: 1785, y: 945}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Eye
+    spriteName: Eye
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ee872648f5e663845b809d2fd660b26b
+    layerID: 146
+    mosaicPosition: {x: 1437, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: RightLeg
+    spriteName: RightLeg
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 28fa8074cb804a44e96b4724665cd633
+    layerID: 180
+    mosaicPosition: {x: 1308, y: 945}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Body
+    spriteName: Body
+    isGroup: 0
+    parentIndex: -1
+    spriteID: dc0375caaa46fc7429b3987ebf64df78
+    layerID: 157
+    mosaicPosition: {x: 4, y: 570}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: LeftLeg
+    spriteName: LeftLeg
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 84e7f43a890c40f48a6227848169cb23
+    layerID: 185
+    mosaicPosition: {x: 1589, y: 945}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: LeftEarTuft
+    spriteName: LeftEarTuft
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 54d96f1e5cea9d741943535b5cc482d6
+    layerID: 168
+    mosaicPosition: {x: 1785, y: 1160}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: LeftEar
+    spriteName: LeftEar
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8b172514c8eda80449e7f34ea72d5c4f
+    layerID: 178
+    mosaicPosition: {x: 4, y: 1294}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
