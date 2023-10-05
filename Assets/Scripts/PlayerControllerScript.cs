@@ -138,6 +138,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     void Update()
     {
+
         if (gHook.isGrappling)
         {
             if (!isGrapplingA) 
@@ -165,6 +166,14 @@ public class PlayerControllerScript : MonoBehaviour
             {   
                 audioManager.PlayRandomFootstep();
                 nextFootstepTime = Time.time+ footstepFrequency;
+            }
+
+            if (!isRunningA)
+            {
+                isRunningA = true;
+
+                playerAnim.SetBool("Running", true);
+
             }
         }
 
@@ -202,21 +211,6 @@ public class PlayerControllerScript : MonoBehaviour
         if (horizontal > 0.1f && !facingRight)
         {
             Flip();
-        }
-
-        if (horizontal != 0f && !isRunningA)
-        {
-            isRunningA= true;
-            if (IsGrounded())
-            {
-                playerAnim.SetBool("Running", true);
-            }
-        }
-
-        else if (horizontal == 0f)
-        {
-            isRunningA= false;
-            playerAnim.SetBool("Running", false);
         }
 
         if (IsGrounded())

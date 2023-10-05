@@ -20,6 +20,7 @@ public class GrapplingHook : MonoBehaviour
     private Vector2 rangeEndPoint;
     private float rangeMaxDistance;
     public PlayerControllerScript pCs;
+    public bool infiniteGrapple = false;
 
     public bool rangeIndicatorON = true;
     private LineRenderer rangeIndicatorLine;
@@ -42,6 +43,11 @@ public class GrapplingHook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (infiniteGrapple) 
+        { 
+            grappleStacksTEXT.gameObject.SetActive(false); 
+        }
+
         startPoint = transform.position;
 
         rangeEndPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -106,7 +112,10 @@ public class GrapplingHook : MonoBehaviour
             {
                 if (!pCs.isFrozen)
                 {
-                    grappleStacks--;
+                    if (!infiniteGrapple)
+                    {
+                        grappleStacks--;
+                    }
                     grapplePoint = hit.point;
                     isGrappling = true;
                     ropeDistance = Vector2.Distance(transform.position, grapplePoint);

@@ -7,6 +7,8 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
+    public Sound[] musics;
+
 
     public static AudioManager instance;
 
@@ -37,9 +39,10 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        //Play("Music");
+
     }
 
+    //PLaySounds-----------------------------------------------------------------------PlaySounds
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -69,6 +72,56 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         return s != null && s.isPlaying;
     }
+
+    public void SetSoundVolume(float volume)
+    {
+        foreach(Sound s in sounds)
+        {
+            s.source.volume = volume;
+        }
+    }
+
+    //Play Music ------------------------------------------------------------------------Play Music
+
+    public void PlayMusic(string name)
+    {
+        Sound s = Array.Find(musics, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Music: " + name + "not found!");
+            return;
+        }
+        s.source.Play();
+        s.isPlaying = true; // Update the isPlaying flag
+    }
+
+    public void StopMusic(string name)
+    {
+        Sound s = Array.Find(musics, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Music: " + name + "not found!");
+            return;
+        }
+        s.source.Stop();
+        s.isPlaying = false; // Update the isPlaying flag
+    }
+
+    public bool IsPlayingMusic(string name)
+    {
+        Sound s = Array.Find(musics, sound => sound.name == name);
+        return s != null && s.isPlaying;
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        foreach (Sound s in musics)
+        {
+            s.source.volume = volume;
+        }
+    }
+
+    // Other sounds ------------------------------------------------------------------- Other sounds
 
     public void PlayRandomFootstep()
     {
