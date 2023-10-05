@@ -9,6 +9,9 @@ public class LevelLoad : MonoBehaviour
     public GoldCollected goldCollected;
     public CameraController camController;
     public PlayerTemperature playerTemperature;
+    public GrapplingHook grapplingHook;
+    public GameModeManager gameModeManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +31,11 @@ public class LevelLoad : MonoBehaviour
 
         playerTemperature = GameObject.Find("Player").GetComponent<PlayerTemperature>();
         playerTemperature.FindTemperatureUI();
+
+
+        grapplingHook = GameObject.Find("GrapplingHook").GetComponent<GrapplingHook>();
+        gameModeManager = GameObject.Find("LevelLoad").GetComponent<GameModeManager>();
+        grapplingHook.InfiniteGrappleIsOn();
     }
 
     // Update is called once per frame
