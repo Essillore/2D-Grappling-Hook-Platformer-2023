@@ -8,6 +8,9 @@ public class PlayerTemperature : MonoBehaviour
     public PlayerControllerScript playerController;
     public bool isMoving = false;
 
+    [Header("Gamemode Temperature Death")]
+    public bool temperatureKills;
+
     [Header("Temperature Rising")]
     public float currentPlayerTemperature;
     public float initialPlayerTemperature;
@@ -41,6 +44,9 @@ public class PlayerTemperature : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //connect boolean of GameModeManager to player temperature, in a way that doesn't require PlayerTemperature to 
+        //exist in options screen.
+        temperatureKills = !GameModeManager.atmosphericTemperature;
         //Temperature change of player
 
         //player temperature will fall, more if the difference between player and environment is bigger.
@@ -69,9 +75,18 @@ public class PlayerTemperature : MonoBehaviour
         else if (isMoving == false) //cooling
         {
 
-         
+
         }
-            playerTemperatureText.text = currentPlayerTemperature.ToString("F1") + " °C"; // Display the temperature with one decimal place
-            environmentTemperatureText.text = environmentTemperature + " °C";
+        playerTemperatureText.text = currentPlayerTemperature.ToString("F1") + " °C"; // Display the temperature with one decimal place
+        environmentTemperatureText.text = environmentTemperature + " °C";
+
+        //Death on temperature
+        if (currentPlayerTemperature <= 0 && temperatureKills == true)
+        {
+            playerController.Death();
+        }
     }
+
+    
+
 }

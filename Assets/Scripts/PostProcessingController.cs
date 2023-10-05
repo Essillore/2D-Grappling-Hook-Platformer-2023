@@ -12,6 +12,12 @@ public class PostProcessingController : MonoBehaviour
     private AnimationCurve blueCurve;
     private TextureCurve blueTextureCurve;
 
+    bool loop = true;
+    public Vector2 bounds = new Vector2(0.0f, 1.0f);
+    public TextureCurve masterTextureCurve;
+    public AnimationCurve masterCurve;
+    public TextureCurve lumVsSatCurve;
+
     public void Start()
     {
         // Check if the postProcessingVolume is assigned
@@ -40,7 +46,15 @@ public class PostProcessingController : MonoBehaviour
             Debug.LogError("Color Adjustments effect not found in the post-processing profile.");
         }
 
+        MasterCurveAdjustment();
+    }
+    public void Update()
+    {
 
+    }
+
+    public void BlueCurveAdjustment()
+    {
         // Set the Color Curves for the blue channel
         if (colorCurves != null)
         {
@@ -52,26 +66,11 @@ public class PostProcessingController : MonoBehaviour
                 new Keyframe(1.0f, 1.0f)
 
             );
-            masterCurve = new AnimationCurve(
-                new Keyframe(0.0f, 0.0f),
-                new Keyframe(0.325f, 0.305f),
-                new Keyframe(0.6f, 0.716f),
-                new Keyframe(1.0f, 1.0f)
-            );
-
- 
-
-            
 
             blueTextureCurve = new TextureCurve(blueCurve, 0.5f, loop, in bounds);
-            masterTextureCurve = new TextureCurve(masterCurve, 0.5f, loop, in bounds);
-            
 
             // Set the blue channel curve
             colorCurves.blue.value = blueTextureCurve;
-            colorCurves.master.value = masterTextureCurve;
-
-
 
             float evaluationPoint = 0.239f; // Change this to your desired point
             float blueCurveValue = colorCurves.blue.value.Evaluate(evaluationPoint);
@@ -80,19 +79,28 @@ public class PostProcessingController : MonoBehaviour
             // Print the evaluated value to the console
             Debug.Log("Blue Channel Curve Value at " + evaluationPoint + ": " + blueCurveValue);
         }
-        //blueChannel.value = blueCurve;
-
-        // Create a new curve for the blue channel
-    
-
     }
-    bool loop = false;
-    public Vector2 bounds = new Vector2(0.0f, 1.0f);
-    public TextureCurve masterTextureCurve;
-    public AnimationCurve masterCurve;
-    public TextureCurve lumVsSatCurve;
 
-    public void Update()
+    public void MasterCurveAdjustment()
+    {
+        if (colorCurves != null)
+        {
+            // Create a new curve for
+            masterCurve = new AnimationCurve(
+                new Keyframe(0.0f, 0.0f),
+                new Keyframe(0.325f, 0.305f),
+                new Keyframe(0.6f, 0.716f),
+                new Keyframe(1.0f, 1.0f)
+            );
+            //Convert animation curve to a texturecurve
+            masterTextureCurve = new TextureCurve(masterCurve, 0.5f, !loop, in bounds);
+
+            //set the curve
+            colorCurves.master.value = masterTextureCurve;
+        }
+    }
+
+    public void LuminosityVsSatCurve()
     {
         // Define the properties of the square wave
         float frequency = 3.0f; // Adjust the frequency of the square wave
@@ -106,8 +114,10 @@ public class PostProcessingController : MonoBehaviour
         squareWave.AddKey(new Keyframe(1.0f / frequency, offset));
 
         lumVsSatCurve = new TextureCurve(squareWave, 0.5f, !loop, in bounds);
-//        lumVsSatCurve = new TextureCurve(squareWave, 0.5f, !loop, in bounds);
+        //        lumVsSatCurve = new TextureCurve(squareWave, 0.5f, !loop, in bounds);
         // Assign the square wave to the LumVsSat channel curve
         colorCurves.lumVsSat.value = lumVsSatCurve;
     }
+
+   
 }
