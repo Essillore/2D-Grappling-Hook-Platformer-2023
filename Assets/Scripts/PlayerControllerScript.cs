@@ -138,7 +138,6 @@ public class PlayerControllerScript : MonoBehaviour
 
     void Update()
     {
-
         if (gHook.isGrappling)
         {
             if (!isGrapplingA) 
@@ -173,8 +172,13 @@ public class PlayerControllerScript : MonoBehaviour
                 isRunningA = true;
 
                 playerAnim.SetBool("Running", true);
-
             }
+        }
+
+        if (!movingHor)
+        {
+            isRunningA = false;
+            playerAnim.SetBool("Running", false);
         }
 
         //Swinging Sound
@@ -193,6 +197,7 @@ public class PlayerControllerScript : MonoBehaviour
             Debug.Log("Stopping Woosh sound");
             audioManager.Stop("Woosh");
         }
+
         //Moving platform braking material swap
         if (horizontal != 0f && onMovingPlat)
         {
@@ -226,6 +231,7 @@ public class PlayerControllerScript : MonoBehaviour
             }
             coyoteTimeTimer = coyoteTime;
         }
+
         else
         {
             camControl.DeadZoneOn();
@@ -238,7 +244,6 @@ public class PlayerControllerScript : MonoBehaviour
             platScript = activePassPlat.GetComponent<PassPlatformScript>();
             platScript.Timerstart();
         }
-
     }
 
     public void Flip()
