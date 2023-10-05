@@ -106,8 +106,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1786
-      y: 294
+      x: 1875
+      y: 1047
       width: 135
       height: 120
     spriteID: 1066c1f8e81df8445bb6d0c2d5c1aaa3
@@ -118,7 +118,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1786, y: 294}
+    uvTransform: {x: 1875, y: 1047}
     spritePosition: {x: 78, y: 1555}
   - name: RightEar
     originalName: 
@@ -148,8 +148,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1938
-      y: 1160
+      x: 1943
+      y: 570
       width: 96
       height: 119
     spriteID: bf497609a5cf5584f9e50a927dfc3c94
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1938, y: 1160}
+    uvTransform: {x: 1943, y: 570}
     spritePosition: {x: 638, y: 1051}
   - name: Beanie
     originalName: 
@@ -183,195 +183,6 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
     spritePosition: {x: 189, y: 758}
-  - name: NeckScarf
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1308
-      y: 570
-      width: 672
-      height: 367
-    spriteID: 14e47352bf6cc134ebfbfbc32eca3745
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 1308, y: 570}
-    spritePosition: {x: 621, y: 577}
-  - name: Tuft6
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1929
-      y: 294
-      width: 90
-      height: 119
-    spriteID: ecd0d26bf6dc0cc42b0c2157980ccf3f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 1929, y: 294}
-    spritePosition: {x: 585, y: 56}
-  - name: Tuft5
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1920
-      y: 150
-      width: 100
-      height: 129
-    spriteID: 996a8db33653b5d4abff784530dfaf0e
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 1920, y: 150}
-    spritePosition: {x: 466, y: 56}
-  - name: Tuft4
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1786
-      y: 4
-      width: 125
-      height: 138
-    spriteID: cce0c094b079cf548aa60f26e70aa767
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 1786, y: 4}
-    spritePosition: {x: 328, y: 80}
-  - name: Scarf2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 290
-      y: 1294
-      width: 279
-      height: 570
-    spriteID: 8707b5d77dc4a7049ba643d6d26a836a
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 290, y: 1294}
-    spritePosition: {x: 419, y: 150}
-  - name: Tuft1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1437
-      y: 361
-      width: 194
-      height: 127
-    spriteID: a374e9b1d1f63b4499871ec46067f7f5
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 1437, y: 361}
-    spritePosition: {x: 41, y: 400}
-  - name: Tuft2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1786
-      y: 150
-      width: 126
-      height: 136
-    spriteID: c845d2e047ed1644cae5f804fe01e91f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 1786, y: 150}
-    spritePosition: {x: 140, y: 279}
-  - name: Tuft3
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1639
-      y: 361
-      width: 138
-      height: 131
-    spriteID: 417d9d78522427241b71b20e8a58a2a9
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 1639, y: 361}
-    spritePosition: {x: 202, y: 165}
-  - name: Scarf1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 992
-      y: 4
-      width: 437
-      height: 480
-    spriteID: 75e6ea29189e1ae46a2552c7e95f50d0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 992, y: 4}
-    spritePosition: {x: 220, y: 265}
   - name: pupil
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -379,8 +190,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1785
-      y: 945
+      x: 1188
+      y: 4
       width: 207
       height: 207
     spriteID: 446469f0e7ce0384abb6a79989d0366b
@@ -391,7 +202,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1785, y: 945}
+    uvTransform: {x: 1188, y: 4}
     spritePosition: {x: 970, y: 885}
   - name: Eye
     originalName: 
@@ -400,8 +211,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1437
-      y: 4
+      x: 1594
+      y: 570
       width: 341
       height: 349
     spriteID: ee872648f5e663845b809d2fd660b26b
@@ -412,7 +223,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1437, y: 4}
+    uvTransform: {x: 1594, y: 570}
     spritePosition: {x: 867, y: 817}
   - name: RightLeg
     originalName: 
@@ -421,8 +232,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1308
-      y: 945
+      x: 1594
+      y: 927
       width: 273
       height: 296
     spriteID: 28fa8074cb804a44e96b4724665cd633
@@ -433,7 +244,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1308, y: 945}
+    uvTransform: {x: 1594, y: 927}
     spritePosition: {x: 767, y: 417}
   - name: Body
     originalName: 
@@ -463,8 +274,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1589
-      y: 945
+      x: 992
+      y: 4
       width: 188
       height: 269
     spriteID: 84e7f43a890c40f48a6227848169cb23
@@ -475,7 +286,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1589, y: 945}
+    uvTransform: {x: 992, y: 4}
     spritePosition: {x: 985, y: 457}
   - name: LeftEarTuft
     originalName: 
@@ -484,8 +295,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1785
-      y: 1160
+      x: 1875
+      y: 927
       width: 145
       height: 112
     spriteID: 54d96f1e5cea9d741943535b5cc482d6
@@ -496,7 +307,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1785, y: 1160}
+    uvTransform: {x: 1875, y: 927}
     spritePosition: {x: 728, y: 1808}
   - name: LeftEar
     originalName: 
@@ -505,8 +316,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1294
+      x: 1308
+      y: 570
       width: 278
       height: 631
     spriteID: 8b172514c8eda80449e7f34ea72d5c4f
@@ -517,7 +328,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1294}
+    uvTransform: {x: 1308, y: 570}
     spritePosition: {x: 628, y: 1198}
   characterData:
     bones: []
@@ -595,7 +406,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 1066c1f8e81df8445bb6d0c2d5c1aaa3
     layerID: 167
-    mosaicPosition: {x: 1786, y: 294}
+    mosaicPosition: {x: 1875, y: 1047}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -615,7 +426,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: bf497609a5cf5584f9e50a927dfc3c94
     layerID: 256
-    mosaicPosition: {x: 1938, y: 1160}
+    mosaicPosition: {x: 1943, y: 570}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -637,8 +448,8 @@ ScriptedImporter:
     layerID: 206
     mosaicPosition: {x: 1308, y: 570}
     flatten: 0
-    isImported: 1
-    isVisible: 1
+    isImported: 0
+    isVisible: 0
   - name: Tuft6
     spriteName: Tuft6
     isGroup: 0
@@ -647,8 +458,8 @@ ScriptedImporter:
     layerID: 231
     mosaicPosition: {x: 1929, y: 294}
     flatten: 0
-    isImported: 1
-    isVisible: 1
+    isImported: 0
+    isVisible: 0
   - name: Tuft5
     spriteName: Tuft5
     isGroup: 0
@@ -657,8 +468,8 @@ ScriptedImporter:
     layerID: 228
     mosaicPosition: {x: 1920, y: 150}
     flatten: 0
-    isImported: 1
-    isVisible: 1
+    isImported: 0
+    isVisible: 0
   - name: Tuft4
     spriteName: Tuft4
     isGroup: 0
@@ -667,8 +478,8 @@ ScriptedImporter:
     layerID: 225
     mosaicPosition: {x: 1786, y: 4}
     flatten: 0
-    isImported: 1
-    isVisible: 1
+    isImported: 0
+    isVisible: 0
   - name: Scarf2
     spriteName: Scarf2
     isGroup: 0
@@ -677,8 +488,8 @@ ScriptedImporter:
     layerID: 222
     mosaicPosition: {x: 290, y: 1294}
     flatten: 0
-    isImported: 1
-    isVisible: 1
+    isImported: 0
+    isVisible: 0
   - name: Tuft1
     spriteName: Tuft1
     isGroup: 0
@@ -687,8 +498,8 @@ ScriptedImporter:
     layerID: 210
     mosaicPosition: {x: 1437, y: 361}
     flatten: 0
-    isImported: 1
-    isVisible: 1
+    isImported: 0
+    isVisible: 0
   - name: Tuft2
     spriteName: Tuft2
     isGroup: 0
@@ -697,8 +508,8 @@ ScriptedImporter:
     layerID: 213
     mosaicPosition: {x: 1786, y: 150}
     flatten: 0
-    isImported: 1
-    isVisible: 1
+    isImported: 0
+    isVisible: 0
   - name: Tuft3
     spriteName: Tuft3
     isGroup: 0
@@ -707,8 +518,8 @@ ScriptedImporter:
     layerID: 217
     mosaicPosition: {x: 1639, y: 361}
     flatten: 0
-    isImported: 1
-    isVisible: 1
+    isImported: 0
+    isVisible: 0
   - name: Scarf1
     spriteName: Scarf1
     isGroup: 0
@@ -717,15 +528,15 @@ ScriptedImporter:
     layerID: 203
     mosaicPosition: {x: 992, y: 4}
     flatten: 0
-    isImported: 1
-    isVisible: 1
+    isImported: 0
+    isVisible: 0
   - name: pupil
     spriteName: pupil
     isGroup: 0
     parentIndex: -1
     spriteID: 446469f0e7ce0384abb6a79989d0366b
     layerID: 155
-    mosaicPosition: {x: 1785, y: 945}
+    mosaicPosition: {x: 1188, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -735,7 +546,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: ee872648f5e663845b809d2fd660b26b
     layerID: 146
-    mosaicPosition: {x: 1437, y: 4}
+    mosaicPosition: {x: 1594, y: 570}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -745,7 +556,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 28fa8074cb804a44e96b4724665cd633
     layerID: 180
-    mosaicPosition: {x: 1308, y: 945}
+    mosaicPosition: {x: 1594, y: 927}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -765,7 +576,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 84e7f43a890c40f48a6227848169cb23
     layerID: 185
-    mosaicPosition: {x: 1589, y: 945}
+    mosaicPosition: {x: 992, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -775,7 +586,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 54d96f1e5cea9d741943535b5cc482d6
     layerID: 168
-    mosaicPosition: {x: 1785, y: 1160}
+    mosaicPosition: {x: 1875, y: 927}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -785,7 +596,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 8b172514c8eda80449e7f34ea72d5c4f
     layerID: 178
-    mosaicPosition: {x: 4, y: 1294}
+    mosaicPosition: {x: 1308, y: 570}
     flatten: 0
     isImported: 1
     isVisible: 1

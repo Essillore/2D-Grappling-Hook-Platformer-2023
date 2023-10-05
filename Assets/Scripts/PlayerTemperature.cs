@@ -32,7 +32,7 @@ public class PlayerTemperature : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        postProcessingController = GameObject.Find("GlobalVolume").GetComponent<PostProcessingController>();
+      //  postProcessingController = GameObject.Find("GlobalVolume").GetComponent<PostProcessingController>();
         FindTemperatureUI();
         currentPlayerTemperature = initialPlayerTemperature;
     }
@@ -98,15 +98,15 @@ public class PlayerTemperature : MonoBehaviour
             }
             else if (currentPlayerTemperature <= 30f && currentPlayerTemperature >= 20f)
             {
-                postProcessingController.MasterCurveAdjustment();
+         //       postProcessingController.MasterCurveAdjustment();
             }
             else if (currentPlayerTemperature <= 20f && currentPlayerTemperature >= 10f)
             {
-                postProcessingController.BlueCurveAdjustment();
+         //       postProcessingController.BlueCurveAdjustment();
             }
             else if (currentPlayerTemperature <= 5f)
             {
-                postProcessingController.BlueAdjustmentUnder5();
+           //     postProcessingController.BlueAdjustmentUnder5();
             }
         
         }
