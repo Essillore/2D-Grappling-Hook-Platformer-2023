@@ -497,11 +497,11 @@ RectTransform:
   - {fileID: 981456254}
   m_Father: {fileID: 729870237}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 295.03, y: -2.7495117}
-  m_SizeDelta: {x: -590.0575, y: -184.8642}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -34, y: 36}
+  m_SizeDelta: {x: 317.9425, y: 327.1358}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &184269078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,7 +577,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 190.82034, y: 0}
+  m_AnchoredPosition: {x: 217, y: 28}
   m_SizeDelta: {x: 381.6407, y: 354.63733}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &263944223
@@ -652,7 +652,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.00014496, y: -25}
+  m_AnchoredPosition: {x: 0.00015258789, y: -25}
   m_SizeDelta: {x: 378.94, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &306645520
@@ -952,6 +952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 520474001}
   - component: {fileID: 520474002}
+  - component: {fileID: 520474003}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1028,22 +1029,38 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.718
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 520474003}
+        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+        m_MethodName: OnVolumeSliderValueChanged
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &520474003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520474000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250057cb7d5eb23438ca112d7567df66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
+  sounds: 0
+  musics: 1
+  runot: 0
 --- !u!1 &526038596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2049,7 +2066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &981456254
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2144,7 +2161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -81, y: -142}
+  m_AnchoredPosition: {x: 3, y: -116}
   m_SizeDelta: {x: 189.7944, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1061184734
@@ -2714,11 +2731,11 @@ RectTransform:
   - {fileID: 2072566822}
   m_Father: {fileID: 729870237}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: -229}
-  m_SizeDelta: {x: 336.0025, y: 55.7}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 16, y: 21}
+  m_SizeDelta: {x: 336.0025, y: 55.699997}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1439805499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2823,6 +2840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1515853914}
   - component: {fileID: 1515853915}
+  - component: {fileID: 1515853916}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -2903,18 +2921,34 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1515853916}
+        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+        m_MethodName: OnVolumeSliderValueChanged
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1515853916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515853913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250057cb7d5eb23438ca112d7567df66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
+  sounds: 0
+  musics: 0
+  runot: 1
 --- !u!1 &1519200387
 GameObject:
   m_ObjectHideFlags: 0
@@ -3015,7 +3049,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550811189}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7e9bbbe7d18d2b9448ea069807a91d4a, type: 3}
@@ -3745,15 +3779,22 @@ MonoBehaviour:
     loop: 0
     isPlaying: 0
     source: {fileID: 0}
+  - name: TEST
+    clip: {fileID: 8300000, guid: a9eee35722ee4f54b91e700edcc20548, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
   musics:
-  - name: AmbientPianoMusic2
+  - name: Music1
     clip: {fileID: 8300000, guid: 0c24c95bf1c67784788c6c753b981b8d, type: 3}
     volume: 0.5
     pitch: 0.526
     loop: 1
     isPlaying: 0
     source: {fileID: 0}
-  - name: AmbientPianoMusic1
+  - name: Music2
     clip: {fileID: 8300000, guid: a9eee35722ee4f54b91e700edcc20548, type: 3}
     volume: 0.509
     pitch: 0.514
@@ -3852,18 +3893,11 @@ MonoBehaviour:
     loop: 0
     isPlaying: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    isPlaying: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
+  - name: TEST
+    clip: {fileID: 8300000, guid: 0c24c95bf1c67784788c6c753b981b8d, type: 3}
+    volume: 0.474
+    pitch: 0.522
+    loop: 1
     isPlaying: 0
     source: {fileID: 0}
 --- !u!4 &1850932857
@@ -4170,6 +4204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2037387427}
   - component: {fileID: 2037387428}
+  - component: {fileID: 2037387429}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -4250,18 +4285,34 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 2037387429}
+        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+        m_MethodName: OnVolumeSliderValueChanged
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2037387429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037387426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250057cb7d5eb23438ca112d7567df66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
+  sounds: 1
+  musics: 0
+  runot: 0
 --- !u!1 &2053387686
 GameObject:
   m_ObjectHideFlags: 0

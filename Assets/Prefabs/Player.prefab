@@ -256,6 +256,8 @@ MonoBehaviour:
   myRB: {fileID: 6291167110173693448}
   facingRight: 1
   audioManager: {fileID: 0}
+  footstepFrequency: 0.34
+  minSwingSpeed: 97.72
   playerSpriteObject: {fileID: 4573351596037431194}
   playerSprite:
   - {fileID: 6563849872215680988}
@@ -271,25 +273,27 @@ MonoBehaviour:
   playerHat:
   - {fileID: 8893837312398592691}
   playerScarf:
-  - {fileID: 567945542267168911}
-  - {fileID: 9061339863922298158}
-  - {fileID: 4364348495391143439}
-  - {fileID: 4590516425311179630}
-  - {fileID: 1476550812149656742}
-  - {fileID: 2439477311937305450}
-  - {fileID: 932696900832981430}
-  - {fileID: 2913113510423551600}
-  - {fileID: 3154603876439271540}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   playerAnim: {fileID: 6757450926430713853}
   isGrapplingA: 0
   isRunningA: 0
   animationsON: 0
   iceBlock: {fileID: 8162457886423737431}
+  isFrozen: 0
   groundCheck: {fileID: 8372952257362414425}
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  grappleUpgrade: 0
   playerSpawn: {fileID: 0}
   myCol: {fileID: 6179218650998535933}
   slide: {fileID: 6200000, guid: f88173d064886244fab4a734bae5418d, type: 2}
@@ -375,12 +379,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 20768907134313247}
   isMoving: 0
+  temperatureKills: 0
+  postProcessingController: {fileID: 0}
   currentPlayerTemperature: 0
   initialPlayerTemperature: 38
   temperatureRiseRate: 0.02
-  someScalingFactor: 0.05
+  someScalingFactor: 0.02
   coolingRate: 0
-  environmentTemperature: 4
+  howQuicklyDrops: 10
+  clampForTemperatureDrop: 2
+  environmentTemperature: -20
   playerTemperatureText: {fileID: 0}
   environmentTemperatureText: {fileID: 0}
 --- !u!120 &8309902556491804212
@@ -511,7 +519,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -954,6 +962,7 @@ MonoBehaviour:
   grappleStacksTEXT: {fileID: 4741344769573508816}
   isGrappling: 0
   pCs: {fileID: 20768907134313247}
+  infiniteGrapple: 0
   rangeIndicatorON: 1
   ropeDistance: 0
 --- !u!120 &6788053929415662517
@@ -1127,8 +1136,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8dfe3e45ae458104fabd804e7daeb32d, type: 2}
+  m_sharedMaterial: {fileID: -8571465597447528784, guid: 8dfe3e45ae458104fabd804e7daeb32d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1152,13 +1161,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1
-  m_fontSizeBase: 1
+  m_fontSize: 1.5
+  m_fontSizeBase: 1.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1551,19 +1560,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba, type: 3}
---- !u!212 &567945542267168911 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 5897401611408230421, guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba, type: 3}
-  m_PrefabInstance: {fileID: 6212285722071933082}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &584883461979960660 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 6785680660511380942, guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba, type: 3}
-  m_PrefabInstance: {fileID: 6212285722071933082}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &932696900832981430 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 6541445546322022700, guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba, type: 3}
   m_PrefabInstance: {fileID: 6212285722071933082}
   m_PrefabAsset: {fileID: 0}
 --- !u!212 &1446982659988268130 stripped
@@ -1571,44 +1570,14 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: -4457772106480614152, guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba, type: 3}
   m_PrefabInstance: {fileID: 6212285722071933082}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &1476550812149656742 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: -4446253701821461444, guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba, type: 3}
-  m_PrefabInstance: {fileID: 6212285722071933082}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &2047205992898851612 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 5359103177601667974, guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba, type: 3}
   m_PrefabInstance: {fileID: 6212285722071933082}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &2439477311937305450 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8641487683819011056, guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba, type: 3}
-  m_PrefabInstance: {fileID: 6212285722071933082}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &2847543527638198434 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: -1030487365597902792, guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba, type: 3}
-  m_PrefabInstance: {fileID: 6212285722071933082}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &2913113510423551600 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 9104886183778582250, guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba, type: 3}
-  m_PrefabInstance: {fileID: 6212285722071933082}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &3154603876439271540 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: -148302745798997778, guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba, type: 3}
-  m_PrefabInstance: {fileID: 6212285722071933082}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &4364348495391143439 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7685180723528504981, guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba, type: 3}
-  m_PrefabInstance: {fileID: 6212285722071933082}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &4590516425311179630 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: -1620536458843458572, guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba, type: 3}
   m_PrefabInstance: {fileID: 6212285722071933082}
   m_PrefabAsset: {fileID: 0}
 --- !u!212 &4674589806354435372 stripped
@@ -1649,10 +1618,5 @@ SpriteRenderer:
 --- !u!212 &8893837312398592691 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: -5955103295130949079, guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba, type: 3}
-  m_PrefabInstance: {fileID: 6212285722071933082}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &9061339863922298158 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: -6055617001370882636, guid: 6ccf2f95d30a4a94ebe88a43cf83a2ba, type: 3}
   m_PrefabInstance: {fileID: 6212285722071933082}
   m_PrefabAsset: {fileID: 0}

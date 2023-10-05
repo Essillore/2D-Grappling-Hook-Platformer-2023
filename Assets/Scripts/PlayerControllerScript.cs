@@ -129,7 +129,7 @@ public class PlayerControllerScript : MonoBehaviour
         if (jumpBufferTimer > 0f && coyoteTime > 0f)
         {
             if (!isFrozen)
-            audioManager.Play("Jump");
+            audioManager.Play("Jump", audioManager.sounds);
             playerAnim.SetTrigger("Jump");
             myRB.AddForce(Vector2.up * jumpForce);
             jumpBufferTimer = 0f;
@@ -190,7 +190,7 @@ public class PlayerControllerScript : MonoBehaviour
         if(IsSwinging() && !audioManager.IsPlaying("Woosh"))
         {
             Debug.Log("Playing Woosh sound");
-            audioManager.Play("Woosh");
+            audioManager.Play("Woosh", audioManager.sounds);
         }
         else if (!IsSwinging() && audioManager.IsPlaying("Woosh"))
         {
@@ -355,7 +355,7 @@ public class PlayerControllerScript : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Coin"))
         {
-            audioManager.Play("Coin");
+            audioManager.Play("Coin", audioManager.sounds);
         }
 
         if (collision.gameObject.CompareTag("GrappleUpgrade"))

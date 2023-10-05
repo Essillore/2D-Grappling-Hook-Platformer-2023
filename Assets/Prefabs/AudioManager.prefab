@@ -1,0 +1,224 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6944215126049302339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7525638275045604080}
+  - component: {fileID: 7643518476128101296}
+  - component: {fileID: 8708458111900706770}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7525638275045604080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6944215126049302339}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 121.23056, y: 12.51336, z: 0.23466362}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7643518476128101296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6944215126049302339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a1542ea7fb90b34e9401c8cdc11afe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Jump
+    clip: {fileID: 8300000, guid: b9491c7141b94ca4db78f96dd51b0cf1, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: Coin
+    clip: {fileID: 8300000, guid: 19a5b18b079f844bba783a9ec5f32efa, type: 3}
+    volume: 0.302
+    pitch: 1
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: Woosh
+    clip: {fileID: 8300000, guid: 1b0c4e0f1fafd0d45a17feeace4450f5, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: Footstep1
+    clip: {fileID: 8300000, guid: 94dbd4febab734210a43c84263f5e116, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: Footstep2
+    clip: {fileID: 8300000, guid: 3ff9fcf8763db443d8c48710cdf9ab60, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: Footstep3
+    clip: {fileID: 8300000, guid: a1382e4f297374edea614c369f31dcb2, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  musics:
+  - name: Music1
+    clip: {fileID: 8300000, guid: 0c24c95bf1c67784788c6c753b981b8d, type: 3}
+    volume: 0.5
+    pitch: 0.526
+    loop: 1
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: Music2
+    clip: {fileID: 8300000, guid: a9eee35722ee4f54b91e700edcc20548, type: 3}
+    volume: 0.509
+    pitch: 0.514
+    loop: 1
+    isPlaying: 0
+    source: {fileID: 0}
+  runot:
+  - name: 2Beginning
+    clip: {fileID: 8300000, guid: 4e19e46df3dd64d4cba8a574f6283233, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: 3TemperatureDrops
+    clip: {fileID: 8300000, guid: 5c9751b0a25743840821de557c68e454, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: 4ChiliEating
+    clip: {fileID: 8300000, guid: e98159f937c8be64d863309c81c83f93, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: 5HatFound
+    clip: {fileID: 8300000, guid: 98c61aae6544be8469be52817b0a0155, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: 6Steps
+    clip: {fileID: 8300000, guid: f5ecd0deca41a16448357de729bf8f80, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: 7WellBellShell
+    clip: {fileID: 8300000, guid: e14d4ad2d811db848b825313c846ef5e, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: 8DarkCaveDown
+    clip: {fileID: 8300000, guid: 0ee69770029cc1f48b7275bc57bd7c67, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: 9SlideRideGap
+    clip: {fileID: 8300000, guid: 29602f62a9c78f645a2eda50b5550abc, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: 10FirstCheckpoint
+    clip: {fileID: 8300000, guid: 1d0e2768549c13d4a91807e66f3da5d6, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: 11Triangular
+    clip: {fileID: 8300000, guid: 7f9577d8d251d2f48be0e9070a59ef63, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: 12EndingFriend
+    clip: {fileID: 8300000, guid: 7e88adbc098063b48a23fe00a6c5fd18, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: 13EndingLover
+    clip: {fileID: 8300000, guid: b65ba75369f07894c9120edd89553d42, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: 14EndingBurned
+    clip: {fileID: 8300000, guid: 041fd7d193c2a37418cf9e99ed15ad4a, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    isPlaying: 0
+    source: {fileID: 0}
+--- !u!114 &8708458111900706770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6944215126049302339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b636969892c1db14c908b6f9dec49327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 

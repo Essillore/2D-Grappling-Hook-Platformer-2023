@@ -28,11 +28,31 @@ public class AudioManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
+        //Initialize sounds
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
+        }
 
+        // Initialize musics
+        foreach (Sound s in musics)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
+        }
+
+        // Initialize runot (or any other arrays)
+        foreach (Sound s in runot)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
@@ -41,16 +61,16 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-
+        Play("Music1", musics);
     }
 
     //PLaySounds-----------------------------------------------------------------------PlaySounds
-    public void Play(string name)
+    public void Play(string name, Sound[] soundArray)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        Sound s = Array.Find(soundArray, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound: " + name + "not found!");
+            Debug.LogWarning("Sound: " + name + " not found in the specified array!");
             return;
         }
         s.source.Play();
@@ -82,76 +102,12 @@ public class AudioManager : MonoBehaviour
             s.source.volume = volume;
         }
     }
-
-    //Play Music ------------------------------------------------------------------------Play Music
-
-    public void PlayMusic(string name)
-    {
-        Sound s = Array.Find(musics, sound => sound.name == name);
-        if (s == null)
-        {
-            Debug.LogWarning("Music: " + name + "not found!");
-            return;
-        }
-        s.source.Play();
-        s.isPlaying = true; // Update the isPlaying flag
-    }
-
-    public void StopMusic(string name)
-    {
-        Sound s = Array.Find(musics, sound => sound.name == name);
-        if (s == null)
-        {
-            Debug.LogWarning("Music: " + name + "not found!");
-            return;
-        }
-        s.source.Stop();
-        s.isPlaying = false; // Update the isPlaying flag
-    }
-
-    public bool IsPlayingMusic(string name)
-    {
-        Sound s = Array.Find(musics, sound => sound.name == name);
-        return s != null && s.isPlaying;
-    }
-
     public void SetMusicVolume(float volume)
     {
         foreach (Sound s in musics)
         {
             s.source.volume = volume;
         }
-    }
-
-    // Play Runot -------------------------------------------------------------------- Play runot
-    public void PlayRuno(string name)
-    {
-        Sound s = Array.Find(runot, sound => sound.name == name);
-        if (s == null)
-        {
-            Debug.LogWarning("Sound: " + name + "not found!");
-            return;
-        }
-        s.source.Play();
-        s.isPlaying = true; // Update the isPlaying flag
-    }
-
-    public void StopRuno(string name)
-    {
-        Sound s = Array.Find(runot, sound => sound.name == name);
-        if (s == null)
-        {
-            Debug.LogWarning("Sound: " + name + "not found!");
-            return;
-        }
-        s.source.Stop();
-        s.isPlaying = false; // Update the isPlaying flag
-    }
-
-    public bool IsPlayingRuno(string name)
-    {
-        Sound s = Array.Find(runot, sound => sound.name == name);
-        return s != null && s.isPlaying;
     }
 
     public void SetRunoVolume(float volume)
