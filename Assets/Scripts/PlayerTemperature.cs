@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class PlayerTemperature : MonoBehaviour
@@ -8,8 +9,12 @@ public class PlayerTemperature : MonoBehaviour
     public PlayerControllerScript playerController;
     public bool isMoving = false;
 
+    [Header("Gamemode Temperature Death")]
+    public bool temperatureKills;
+    public PostProcessingController postProcessingController;
+
     [Header("Temperature Rising")]
-    public float currentPlayerTemperature;
+    public static float currentPlayerTemperature;
     public float initialPlayerTemperature;
     public float temperatureRiseRate = 0.02f;
     public float someScalingFactor = 0.02f;
@@ -27,6 +32,7 @@ public class PlayerTemperature : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        postProcessingController = GameObject.Find("GlobalVolume").GetComponent<PostProcessingController>();
         FindTemperatureUI();
         currentPlayerTemperature = initialPlayerTemperature;
     }
@@ -41,6 +47,9 @@ public class PlayerTemperature : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //connect boolean of GameModeManager to player temperature, in a way that doesn't require PlayerTemperature to 
+        //exist in options screen.
+        temperatureKills = !GameModeManager.atmosphericTemperature;
         //Temperature change of player
 
         //player temperature will fall, more if the difference between player and environment is bigger.
@@ -69,9 +78,40 @@ public class PlayerTemperature : MonoBehaviour
         else if (isMoving == false) //cooling
         {
 
-         
+
         }
-            playerTemperatureText.text = currentPlayerTemperature.ToString("F1") + " °C"; // Display the temperature with one decimal place
-            environmentTemperatureText.text = environmentTemperature + " °C";
+        playerTemperatureText.text = currentPlayerTemperature.ToString("F1") + " °C"; // Display the temperature with one decimal place
+        environmentTemperatureText.text = environmentTemperature + " °C";
+
+        //Death on temperature
+        if (currentPlayerTemperature <= 0 && temperatureKills == true)
+        {
+            playerController.Death();
+        }
+
+        //PostProcessing effects for level 1
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            if (currentPlayerTemperature > 30f)
+            {
+                //postProcessingController.LuminosityVsSatCurve();
+            }
+            else if (currentPlayerTemperature <= 30f && currentPlayerTemperature >= 20f)
+            {
+                postProcessingController.MasterCurveAdjustment();
+            }
+            else if (currentPlayerTemperature <= 20f && currentPlayerTemperature >= 10f)
+            {
+                postProcessingController.BlueCurveAdjustment();
+            }
+            else if (currentPlayerTemperature <= 5f)
+            {
+                postProcessingController.BlueAdjustmentUnder5();
+            }
+        
+        }
     }
+
+    
+
 }
