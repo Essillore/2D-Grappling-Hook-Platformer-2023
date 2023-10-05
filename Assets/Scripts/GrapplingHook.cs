@@ -104,11 +104,14 @@ public class GrapplingHook : MonoBehaviour
 
             if (hit.collider != null)
             {
-                grappleStacks--;
-                grapplePoint = hit.point;
-                isGrappling = true;
-                ropeDistance = Vector2.Distance(transform.position, grapplePoint);
-                StartCoroutine(Grapple());
+                if (!pCs.isFrozen)
+                {
+                    grappleStacks--;
+                    grapplePoint = hit.point;
+                    isGrappling = true;
+                    ropeDistance = Vector2.Distance(transform.position, grapplePoint);
+                    StartCoroutine(Grapple());
+                }
             }
         }
     }

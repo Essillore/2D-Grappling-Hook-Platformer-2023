@@ -36,7 +36,7 @@ public class PlayerControllerScript : MonoBehaviour
     public bool isRunningA = false;
     public bool animationsON = true;
     public SpriteRenderer iceBlock;
-    private bool isFrozen = false;
+    public bool isFrozen = false;
     private bool inFreezingWater = false;
 
     [Header("Grounded")]
