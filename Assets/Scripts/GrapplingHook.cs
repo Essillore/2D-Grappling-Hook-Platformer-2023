@@ -87,6 +87,10 @@ public class GrapplingHook : MonoBehaviour
 
 
     }
+    public void InfiniteGrappleIsOn()
+    {
+        infiniteGrapple = GameModeManager.infiniteGrappleStacks;
+    }
 
     public void Hook(InputAction.CallbackContext context)
     {

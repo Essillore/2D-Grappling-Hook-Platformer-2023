@@ -8,6 +8,7 @@ public class GameModeManager : MonoBehaviour
     public static GameModeManager instance;
 
     public static bool atmosphericTemperature;
+    public static bool infiniteGrappleStacks;
     // Start is called before the first frame update
 
         private void Awake()
@@ -38,6 +39,10 @@ public class GameModeManager : MonoBehaviour
 
     }
 
+    public void ToggleInfiniteGrapplestacks()
+    {
+        infiniteGrappleStacks = !infiniteGrappleStacks;
+    }
 
     public void ToggleAtmosphericTemperature()
     {

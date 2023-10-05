@@ -388,7 +388,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     private IEnumerator OnDeath()
     {
-        if (inFreezingWater)
+        if (inFreezingWater || playerTemperature.currentPlayerTemperature >= 0)
         {
             playerTemperature.currentPlayerTemperature = 0f;
             Frozen();
