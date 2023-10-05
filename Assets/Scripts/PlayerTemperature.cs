@@ -14,7 +14,7 @@ public class PlayerTemperature : MonoBehaviour
     public PostProcessingController postProcessingController;
 
     [Header("Temperature Rising")]
-    public static float currentPlayerTemperature;
+    public float currentPlayerTemperature;
     public float initialPlayerTemperature;
     public float temperatureRiseRate = 0.02f;
     public float someScalingFactor = 0.02f;
