@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class PlayerTemperature : MonoBehaviour
@@ -10,9 +11,10 @@ public class PlayerTemperature : MonoBehaviour
 
     [Header("Gamemode Temperature Death")]
     public bool temperatureKills;
+    public PostProcessingController postProcessingController;
 
     [Header("Temperature Rising")]
-    public float currentPlayerTemperature;
+    public static float currentPlayerTemperature;
     public float initialPlayerTemperature;
     public float temperatureRiseRate = 0.02f;
     public float someScalingFactor = 0.02f;
@@ -30,6 +32,7 @@ public class PlayerTemperature : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        postProcessingController = GameObject.Find("GlobalVolume").GetComponent<PostProcessingController>();
         FindTemperatureUI();
         currentPlayerTemperature = initialPlayerTemperature;
     }
@@ -84,6 +87,28 @@ public class PlayerTemperature : MonoBehaviour
         if (currentPlayerTemperature <= 0 && temperatureKills == true)
         {
             playerController.Death();
+        }
+
+        //PostProcessing effects for level 1
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            if (currentPlayerTemperature > 30f)
+            {
+                //postProcessingController.LuminosityVsSatCurve();
+            }
+            else if (currentPlayerTemperature <= 30f && currentPlayerTemperature >= 20f)
+            {
+                postProcessingController.MasterCurveAdjustment();
+            }
+            else if (currentPlayerTemperature <= 20f && currentPlayerTemperature >= 10f)
+            {
+                postProcessingController.BlueCurveAdjustment();
+            }
+            else if (currentPlayerTemperature <= 5f)
+            {
+                postProcessingController.BlueAdjustmentUnder5();
+            }
+        
         }
     }
 
