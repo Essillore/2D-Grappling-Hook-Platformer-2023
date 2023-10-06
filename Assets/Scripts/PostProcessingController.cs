@@ -81,6 +81,29 @@ public class PostProcessingController : MonoBehaviour
         }
     }
 
+    public void BlueAdjustmentUnder10()
+    {
+
+        // Set the Color Curves for the blue channel
+        if (colorCurves != null)
+        {
+            // Create a new curve for the blue channel
+            blueCurve = new AnimationCurve(
+                new Keyframe(0.0f, 0.0f),
+                new Keyframe(0.131f, 0.532f),
+                new Keyframe(0.351f, 0.390f),
+                new Keyframe(1.0f, 1.0f)
+
+            );
+
+            blueTextureCurve = new TextureCurve(blueCurve, 0.5f, loop, in bounds);
+
+            // Set the blue channel curve
+            colorCurves.blue.value = blueTextureCurve;
+        }
+    }
+
+
     public void BlueAdjustmentUnder5()
     {
 

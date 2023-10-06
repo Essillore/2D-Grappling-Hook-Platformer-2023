@@ -47,7 +47,12 @@ public class GameModeManager : MonoBehaviour
     public void ToggleAtmosphericTemperature()
     {
         
-        // Button to toggle Temperature to atmoshperic or killing boolean
-        atmosphericTemperature = !atmosphericTemperature;
+        // Button to toggle Temperature to atmoshperic
+        atmosphericTemperature = true;
     }
+    public void ToggleKillingTemperature()
+    {
+        atmosphericTemperature = false;
+    }
+
 }

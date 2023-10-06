@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    //public PauseScript pause;
-    // public Animator fadeScreen;
     public float transitionTime = 1f;
 
     void Start()
@@ -17,27 +15,12 @@ public class LevelManager : MonoBehaviour
             SceneManager.LoadScene(3);
         }
 
-        //  pause = GetComponent<PauseScript>();
-        //  fadeScreen = GameObject.Find("FadeScreen").GetComponent<Animator>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            if (SceneManager.GetActiveScene().buildIndex == 3)
-            {
-                SceneManager.LoadScene(1);
-            }
-            else
-            {
-                SceneManager.LoadScene(3);
-            }
-
-        }
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             SceneManager.LoadScene(2);
         }
@@ -47,7 +30,6 @@ public class LevelManager : MonoBehaviour
     public void ChangeLevel(int levelNumber)
     {
         //pause.paused = false;
-        // fadeScreen.SetTrigger("ChangeLevel");
         StartCoroutine(NewLevel(levelNumber));
     }
 

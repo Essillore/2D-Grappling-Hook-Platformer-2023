@@ -35,6 +35,21 @@ public class PlayerTemperature : MonoBehaviour
       //  postProcessingController = GameObject.Find("GlobalVolume").GetComponent<PostProcessingController>();
         FindTemperatureUI();
         currentPlayerTemperature = initialPlayerTemperature;
+
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            someScalingFactor = 0.03f;
+            howQuicklyDrops = 12f;
+            environmentTemperature = -20f;
+            clampForTemperatureDrop = 1.5f;
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            someScalingFactor = 0.02f;
+            howQuicklyDrops = 10f;
+            environmentTemperature = -2f;
+            clampForTemperatureDrop = 2f;
+        }
     }
 
     public void FindTemperatureUI()
@@ -96,17 +111,21 @@ public class PlayerTemperature : MonoBehaviour
             {
                 //postProcessingController.LuminosityVsSatCurve();
             }
-            else if (currentPlayerTemperature <= 30f && currentPlayerTemperature >= 20f)
+            else if (currentPlayerTemperature <= 29.1f && currentPlayerTemperature >= 20.1f)
             {
          //       postProcessingController.MasterCurveAdjustment();
             }
-            else if (currentPlayerTemperature <= 20f && currentPlayerTemperature >= 10f)
+            else if (currentPlayerTemperature <= 19.8f && currentPlayerTemperature >= 10.1f)
             {
-         //       postProcessingController.BlueCurveAdjustment();
+                postProcessingController.BlueCurveAdjustment();
+            }
+            else if (currentPlayerTemperature <= 9.8f && currentPlayerTemperature >= 5.1f)
+            {
+                postProcessingController.BlueAdjustmentUnder10();
             }
             else if (currentPlayerTemperature <= 5f)
             {
-           //     postProcessingController.BlueAdjustmentUnder5();
+                postProcessingController.BlueAdjustmentUnder5();
             }
         
         }

@@ -34,7 +34,7 @@ public class LevelLoad : MonoBehaviour
 
 
         grapplingHook = GameObject.Find("GrapplingHook").GetComponent<GrapplingHook>();
-        gameModeManager = GameObject.Find("LevelLoad").GetComponent<GameModeManager>();
+       // gameModeManager = GameObject.Find("GameModeManager").GetComponent<GameModeManager>();
         grapplingHook.InfiniteGrappleIsOn();
     }
 

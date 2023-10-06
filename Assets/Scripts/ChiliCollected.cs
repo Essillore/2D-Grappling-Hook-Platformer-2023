@@ -15,7 +15,7 @@ public class ChiliCollected : MonoBehaviour
 
     public PlayerTemperature playerTemperature;
 
-    public float chiliWarmingAmount = 3f;
+    public float chiliWarmingAmount = 10f;
 
     // Start is called before the first frame update
     void Start()

@@ -16,12 +16,15 @@ EditorBuildSettings:
     guid: ff62946ef85e24b4f80df8195aeddd83
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: c30a9506e7034db45b3ff622fedcddaa
+    guid: 80276984f6e3ee24b90061f61673b79e
   - enabled: 1
     path: Assets/Scenes/Options.unity
     guid: 7e55f37fa7e8a0f49b363e9107cf24ad
   - enabled: 1
     path: Assets/Scenes/EndingUI.unity
     guid: d2a1b234d30e68944ac9819b8fdc763a
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: c30a9506e7034db45b3ff622fedcddaa
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a7495018f6a02364f9351e20a93237b3, type: 2}
