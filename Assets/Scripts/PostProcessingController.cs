@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
 
 public class PostProcessingController : MonoBehaviour
 {
@@ -16,10 +17,19 @@ public class PostProcessingController : MonoBehaviour
     public Vector2 bounds = new Vector2(0.0f, 1.0f);
     public TextureCurve masterTextureCurve;
     public AnimationCurve masterCurve;
+    public AnimationCurve luminosityBonfireCurve;
     public TextureCurve lumVsSatCurve;
 
-    public void Start()
+
+    public Image iceOverLay;
+    private Color targetColor; // The target color with the desired alpha.
+    public float newAlpha;
+
+    void Start()
     {
+
+        iceOverLay = GameObject.Find("IceOver").GetComponent<Image>();
+        targetColor = iceOverLay.color; // Store the initial color
         // Check if the postProcessingVolume is assigned
         if (postProcessingVolume == null)
         {
@@ -47,14 +57,18 @@ public class PostProcessingController : MonoBehaviour
         }
 
         MasterCurveAdjustment();
+
     }
     public void Update()
     {
-
+        // Update the color with the new alpha value.
+        targetColor.a = newAlpha;
+        iceOverLay.color = targetColor;
     }
 
     public void BlueCurveAdjustment()
     {
+        newAlpha = 0.0125f;
         // Set the Color Curves for the blue channel
         if (colorCurves != null)
         {
@@ -81,9 +95,30 @@ public class PostProcessingController : MonoBehaviour
         }
     }
 
+    public void BlueAdjustmentUnder30()
+    {
+        newAlpha = 0.0075f;
+        // Set the Color Curves for the blue channel
+        if (colorCurves != null)
+        {
+            // Create a new curve for the blue channel
+            blueCurve = new AnimationCurve(
+                new Keyframe(0.0f, 0.0f),
+                new Keyframe(1.0f, 1.0f)
+
+            );
+
+            blueTextureCurve = new TextureCurve(blueCurve, 0.5f, loop, in bounds);
+
+            // Set the blue channel curve
+            colorCurves.blue.value = blueTextureCurve;
+        }
+    }
+
+
     public void BlueAdjustmentUnder10()
     {
-
+        newAlpha = 0.038f;
         // Set the Color Curves for the blue channel
         if (colorCurves != null)
         {
@@ -106,7 +141,7 @@ public class PostProcessingController : MonoBehaviour
 
     public void BlueAdjustmentUnder5()
     {
-
+        newAlpha = 0.076f;
         // Set the Color Curves for the blue channel
         if (colorCurves != null)
         {
@@ -145,7 +180,40 @@ public class PostProcessingController : MonoBehaviour
         }
     }
 
-    public void LuminosityVsSatCurve()
+    public void LuminosityAtBonfire()
+    {
+        if (colorCurves != null)
+        {
+            // Create a new curve for
+            luminosityBonfireCurve = new AnimationCurve(
+                new Keyframe(0.0f, 0.0f),
+                new Keyframe(0.146f, 0.809f),
+                new Keyframe(0.298f, 0.1f),
+                new Keyframe(0.6f, 0.5f),
+                new Keyframe(0.6f, 0.716f),
+                new Keyframe(1.0f, 1.0f)
+            ); ; ;
+            lumVsSatCurve = new TextureCurve(luminosityBonfireCurve, 0.5f, !loop, in bounds);
+            // Assign the square wave to the LumVsSat channel curve
+            colorCurves.lumVsSat.value = lumVsSatCurve;
+        }
+    }
+    public void LuminosityReset()
+    {
+        if (colorCurves != null)
+        {
+            // Create a new curve for
+            luminosityBonfireCurve = new AnimationCurve(
+                new Keyframe(0.0f, 0.5f),
+                new Keyframe(1.0f, 0.5f)
+            );
+            lumVsSatCurve = new TextureCurve(luminosityBonfireCurve, 0.5f, !loop, in bounds);
+            // Assign the square wave to the LumVsSat channel curve
+            colorCurves.lumVsSat.value = lumVsSatCurve;
+        }
+    }
+
+    public void LuminosityVsSatCurveWave()
     {
         // Define the properties of the square wave
         float frequency = 3.0f; // Adjust the frequency of the square wave

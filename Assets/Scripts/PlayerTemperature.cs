@@ -109,11 +109,12 @@ public class PlayerTemperature : MonoBehaviour
         {
             if (currentPlayerTemperature > 30f)
             {
-                //postProcessingController.LuminosityVsSatCurve();
+                postProcessingController.LuminosityAtBonfire();
             }
             else if (currentPlayerTemperature <= 29.1f && currentPlayerTemperature >= 20.1f)
             {
-         //       postProcessingController.MasterCurveAdjustment();
+                postProcessingController.BlueAdjustmentUnder30();
+                postProcessingController.LuminosityReset();
             }
             else if (currentPlayerTemperature <= 19.8f && currentPlayerTemperature >= 10.1f)
             {
