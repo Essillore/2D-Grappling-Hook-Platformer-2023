@@ -7,6 +7,7 @@ using UnityEngine.InputSystem.Processors;
 public class CameraController : MonoBehaviour
 {
     public CinemachineVirtualCamera basic2Dcamera;
+    public CinemachineVirtualCamera waterCamera;
     public CinemachineFramingTransposer camSettings;
     public CinemachineBasicMultiChannelPerlin camNoise;
     public float JumpDeadZone = 2f;
