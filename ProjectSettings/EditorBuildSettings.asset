@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: c30a9506e7034db45b3ff622fedcddaa
+  - enabled: 1
+    path: Assets/Scenes/ShaderTestScene.unity
+    guid: 1044a88f697731349be93b743356021b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a7495018f6a02364f9351e20a93237b3, type: 2}
