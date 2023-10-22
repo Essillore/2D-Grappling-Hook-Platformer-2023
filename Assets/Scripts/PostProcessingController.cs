@@ -104,8 +104,9 @@ public class PostProcessingController : MonoBehaviour
             // Create a new curve for the blue channel
             blueCurve = new AnimationCurve(
                 new Keyframe(0.0f, 0.0f),
+                new Keyframe(0.240f, 0.532f),
+                new Keyframe(0.551f, 0.290f),
                 new Keyframe(1.0f, 1.0f)
-
             );
 
             blueTextureCurve = new TextureCurve(blueCurve, 0.5f, loop, in bounds);

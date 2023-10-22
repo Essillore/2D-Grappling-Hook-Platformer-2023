@@ -14,8 +14,10 @@ public class TestAudioTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            audioManager.SetRunoVolume(0.3f);
             print("osuit");
             audioManager.Play("4ChiliEating", audioManager.runot);
+            print("audio soi");
         }
     }
 }
