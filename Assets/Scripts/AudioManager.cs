@@ -2,6 +2,7 @@ using UnityEngine.Audio;
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using UnityEngine.Rendering;
 
 public class AudioManager : MonoBehaviour
 {
@@ -57,6 +58,8 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+
+        SetRunoVolume(30f);
     }
 
     private void Start()
