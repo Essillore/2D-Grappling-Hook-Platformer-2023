@@ -2123,6 +2123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basic2Dcamera: {fileID: 1127570012}
+  waterCamera: {fileID: 0}
   camSettings: {fileID: 0}
   camNoise: {fileID: 0}
   JumpDeadZone: 0.3
@@ -3329,6 +3330,14 @@ PrefabInstance:
     - target: {fileID: 7643518476128101296, guid: 54752f5f6be6a3142a4bd3c37f2fb187, type: 3}
       propertyPath: musics.Array.data[1].name
       value: Music2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643518476128101296, guid: 54752f5f6be6a3142a4bd3c37f2fb187, type: 3}
+      propertyPath: musics.Array.data[0].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643518476128101296, guid: 54752f5f6be6a3142a4bd3c37f2fb187, type: 3}
+      propertyPath: musics.Array.data[1].pitch
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
